@@ -3,6 +3,7 @@
 
 import SwiftUI
 import AlbertosCore
+import Combine
 
 struct MenuList: View {
     let viewModel: ViewModel
@@ -24,7 +25,7 @@ extension MenuList {
     class ViewModel: ObservableObject {
         @Published private (set) var sections: [MenuSection]
         
-        init(menu: [MenuItem],
+        init(menuFetching: MenuFetching,
              menuGrouping: @escaping ([MenuItem]) -> [MenuSection] = groupMenuByCategory) {
             self.sections = menuGrouping([])
         }
@@ -33,6 +34,6 @@ extension MenuList {
 
 struct MenuList_Previews: PreviewProvider {
     static var previews: some View {
-        MenuList(viewModel: .init(menu: menu))
+        MenuList(viewModel: .init(menuFetching: MenuFetchingPlaceholder()))
     }
 }

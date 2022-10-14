@@ -16,7 +16,7 @@ final class MenuListViewModelTests: XCTestCase {
             called = true
             return inputSections
         }
-        let viewModel = MenuList.ViewModel(menu: [.fixture()], menuGrouping: spyClosure)
+        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingPlaceholder(), menuGrouping: spyClosure)
         let sections = viewModel.sections
         
         XCTAssertTrue(called, "check that the given closure was called")
@@ -24,13 +24,17 @@ final class MenuListViewModelTests: XCTestCase {
     }
     
     func test_whenFetchingStarts_publishesEmptyMenu() {
-        let viewModel = MenuList.ViewModel(menu: [.fixture()])
+        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingPlaceholder())
         
         XCTAssertTrue(viewModel.sections.isEmpty)
     }
     
     func test_whenFecthingMenuSucceedsAndGroupingByCategory_publishesSectionsBuiltFromReceivedMenu() {
+        // Arrange the ViewModel and its data source
         
+        // Act on the ViewModel to trigger the update
+        
+        // Assert the expected behavior
     }
     
     func test_whenFetchingFails_publishesAnError() {

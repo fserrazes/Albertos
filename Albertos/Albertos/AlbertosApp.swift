@@ -4,6 +4,7 @@
 import SwiftUI
 import AlbertosCore
 
+// In this first iteration the menu is an hard-coded array
 public let menu = [
     MenuItem(category: "starters", name: "Caprese Salad", spicy: false, price: 3.45),
     MenuItem(category: "starters", name: "Arancini Balls", spicy: false, price: 4.56),
@@ -17,13 +18,11 @@ public let menu = [
 
 @main
 struct AlbertosApp: App {
-    // In this first iteration the menu is an hard-coded array
-    
     
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                MenuList(viewModel: .init(menu: menu))
+                MenuList(viewModel: .init(menuFetching: MenuFetchingPlaceholder()))
                     .navigationTitle("Alberto's 🇮🇹")
             }
         }
