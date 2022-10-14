@@ -18,12 +18,12 @@ func groupMenuByCategory(_ menu: [MenuItem]) -> [MenuSection] {
     
     return Dictionary(grouping: menu, by: { $0.category }).map { key, value in
         MenuSection(category: key, items: value)
-    }
+    }.sorted { $0.category > $1.category }
 }
                         
 final class MenuGroupingTests: XCTestCase {
     
-    func test_menuWithManyCategories_returnsOneSectionPerCategory() {
+    func test_menuWithManyCategories_returnsOneSectionPerCategoryInReverseAlphabeticalOrder() {
         let menu = [
             MenuItem(category: "pastas", name: "a pasta"),
             MenuItem(category: "drinks", name: "a drink"),
