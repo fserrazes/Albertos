@@ -8,9 +8,11 @@ public struct MenuItem: Identifiable {
     
     public let category: String
     public let name: String
+    public let spicy: Bool
     
-    public init(category: String, name: String) {
+    public init(category: String, name: String, spicy: Bool) {
         self.category = category
         self.name = name
+        self.spicy = spicy
     }
 }

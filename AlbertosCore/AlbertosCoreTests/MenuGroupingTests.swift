@@ -7,11 +7,11 @@ import AlbertosCore
 final class MenuGroupingTests: XCTestCase {
     
     func test_menuWithManyCategories_returnsOneSectionPerCategoryInReverseAlphabeticalOrder() {
-        let menu = [
-            MenuItem(category: "pastas", name: "a pasta"),
-            MenuItem(category: "drinks", name: "a drink"),
-            MenuItem(category: "pastas", name: "another pasta"),
-            MenuItem(category: "desserts", name: "a dessert")
+        let menu: [MenuItem] = [
+            .fixture(category: "pastas"),
+            .fixture(category: "drinks"),
+            .fixture(category: "pastas"),
+            .fixture(category: "desserts")
         ]
         
         let sections = groupMenuByCategory(menu)
@@ -24,14 +24,15 @@ final class MenuGroupingTests: XCTestCase {
     
     func test_menuWithOneCategory_returnsOneSection() throws {
         let menu = [
-            MenuItem(category: "pastas", name: "name"),
-            MenuItem(category: "pastas", name: "other name")
+            MenuItem.fixture(category: "pastas", name: "name"),
+            MenuItem.fixture(category: "pastas", name: "other name")
         ]
         
         let sections = groupMenuByCategory(menu)
         
         XCTAssertEqual(sections.count, 1)
         let section = try XCTUnwrap(sections.first)
+        XCTAssertEqual(section.items.count, 2)
         XCTAssertEqual(section.items.first?.name, "name")
         XCTAssertEqual(section.items.last?.name, "other name")
     }
