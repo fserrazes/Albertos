@@ -5,10 +5,10 @@ import SwiftUI
 import AlbertosCore
 
 struct MenuRow: View {
-    let item: MenuItem
+    let viewModel: ViewModel
     
     var body: some View {
-        Text(item.name)
+        Text(viewModel.text)
     }
 }
 
@@ -25,6 +25,6 @@ extension MenuRow {
 struct MenuRow_Previews: PreviewProvider {
     static var previews: some View {
         let item = MenuItem(category: "some category", name: "any name", spicy: true, price: 0.99)
-        MenuRow(item: item)
+        MenuRow(viewModel: .init(item: item))
     }
 }
