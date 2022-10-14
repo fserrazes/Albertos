@@ -10,7 +10,7 @@ extension MenuRow {
         let text: String
         
         init(item: MenuItem) {
-            text = item.name
+            text = item.spicy ? "\(item.name) 🌶" : item.name
         }
     }
 }
@@ -25,6 +25,11 @@ final class MenuRowViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.text, "name")
     }
     
-    func test_whenItemIsSpicy_textIsItemWithChillyEmoji() {}
-
+    func test_whenItemIsSpicy_textIsItemWithChillyEmoji() {
+        let item = MenuItem.fixture(name: "name", spicy: true)
+        
+        let viewModel = MenuRow.ViewModel(item: item)
+        
+        XCTAssertEqual(viewModel.text, "name 🌶")
+    }
 }
