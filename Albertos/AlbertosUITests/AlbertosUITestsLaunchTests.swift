@@ -5,6 +5,7 @@ import XCTest
 
 final class AlbertosUITestsLaunchTests: XCTestCase {
 
+    /*
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
@@ -25,4 +26,5 @@ final class AlbertosUITestsLaunchTests: XCTestCase {
         attachment.lifetime = .keepAlways
         add(attachment)
     }
+     */
 }
