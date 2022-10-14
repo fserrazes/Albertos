@@ -7,7 +7,7 @@ import AlbertosCore
 
 final class MenuListViewModelTests: XCTestCase {
 
-    func test_calls_GivenGroupingFunction() {
+    func test_callsGivenGroupingFunction() {
         var called = false
         let inputSections = [MenuSection.fixture()]
         let spyClosure: ([MenuItem]) -> [MenuSection] = { items in
@@ -20,6 +20,19 @@ final class MenuListViewModelTests: XCTestCase {
         XCTAssertTrue(called, "Check that the given closure was called")
         XCTAssertEqual(sections, inputSections, "Returns value from closure")
     }
+    
+    func test_whenFetchingStarts_publishesEmptyMenu() {
+        
+    }
+    
+    func test_whenFecthingMenuSucceedsAndGroupingByCategory_publishesSectionsBuiltFromReceivedMenu() {
+        
+    }
+    
+    func test_whenFetchingFails_publishesAnError() {
+        
+    }
+    
 }
 
 extension MenuSection: Equatable {
