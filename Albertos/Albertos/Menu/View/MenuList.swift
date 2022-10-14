@@ -21,8 +21,8 @@ struct MenuList: View {
 }
 
 extension MenuList {
-    struct ViewModel {
-        let sections: [MenuSection]
+    class ViewModel: ObservableObject {
+        @Published private (set) var sections: [MenuSection]
         
         init(menu: [MenuItem],
              menuGrouping: @escaping ([MenuItem]) -> [MenuSection] = groupMenuByCategory) {
