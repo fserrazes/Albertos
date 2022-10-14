@@ -5,16 +5,6 @@ import XCTest
 import AlbertosCore
 @testable import Albertos
 
-extension MenuRow {
-    struct ViewModel {
-        let text: String
-        
-        init(item: MenuItem) {
-            text = item.spicy ? "\(item.name) 🌶" : item.name
-        }
-    }
-}
-
 final class MenuRowViewModelTests: XCTestCase {
 
     func test_whenItemIsNotSpicy_textIsItemNameOnly() {
