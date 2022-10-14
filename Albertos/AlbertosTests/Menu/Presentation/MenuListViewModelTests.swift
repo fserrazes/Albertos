@@ -22,7 +22,9 @@ final class MenuListViewModelTests: XCTestCase {
     }
     
     func test_whenFetchingStarts_publishesEmptyMenu() {
+        let viewModel = MenuList.ViewModel(menu: [.fixture()])
         
+        XCTAssertTrue(viewModel.sections.isEmpty)
     }
     
     func test_whenFecthingMenuSucceedsAndGroupingByCategory_publishesSectionsBuiltFromReceivedMenu() {
