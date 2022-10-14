@@ -20,6 +20,17 @@ struct MenuList: View {
     }
 }
 
+extension MenuList {
+    struct ViewModel {
+        let sections: [MenuSection]
+        
+        init(menu: [MenuItem],
+             menuGrouping: @escaping ([MenuItem]) -> [MenuSection]) {
+            self.sections = menuGrouping(menu)
+        }
+    }
+}
+
 struct MenuList_Previews: PreviewProvider {
     static var previews: some View {
         MenuList(sections: groupMenuByCategory(menu))
