@@ -25,7 +25,7 @@ extension MenuList {
         let sections: [MenuSection]
         
         init(menu: [MenuItem],
-             menuGrouping: @escaping ([MenuItem]) -> [MenuSection]) {
+             menuGrouping: @escaping ([MenuItem]) -> [MenuSection] = groupMenuByCategory) {
             self.sections = menuGrouping(menu)
         }
     }
@@ -33,6 +33,6 @@ extension MenuList {
 
 struct MenuList_Previews: PreviewProvider {
     static var previews: some View {
-        MenuList(viewModel: .init(menu: menu, menuGrouping: groupMenuByCategory))
+        MenuList(viewModel: .init(menu: menu))
     }
 }
