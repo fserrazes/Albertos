@@ -10,6 +10,9 @@
 		0D25FF1928F96AE6001B7682 /* AlbertosCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D25FF1028F96AE5001B7682 /* AlbertosCore.framework */; };
 		0D25FF1F28F96AE6001B7682 /* AlbertosCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D25FF1328F96AE5001B7682 /* AlbertosCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D25FF2928F96DD8001B7682 /* MenuGroupingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FF2828F96DD8001B7682 /* MenuGroupingTests.swift */; };
+		0D25FF2C28F978FA001B7682 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FF2B28F978FA001B7682 /* MenuItem.swift */; };
+		0D25FF2E28F97921001B7682 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FF2D28F97921001B7682 /* MenuSection.swift */; };
+		0D25FF3228F97A42001B7682 /* MenuGrouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FF3128F97A42001B7682 /* MenuGrouping.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,9 @@
 		0D25FF1328F96AE5001B7682 /* AlbertosCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbertosCore.h; sourceTree = "<group>"; };
 		0D25FF1828F96AE6001B7682 /* AlbertosCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbertosCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D25FF2828F96DD8001B7682 /* MenuGroupingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGroupingTests.swift; sourceTree = "<group>"; };
+		0D25FF2B28F978FA001B7682 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		0D25FF2D28F97921001B7682 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
+		0D25FF3128F97A42001B7682 /* MenuGrouping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGrouping.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				0D25FF1328F96AE5001B7682 /* AlbertosCore.h */,
+				0D25FF2A28F978D2001B7682 /* Menu */,
 			);
 			path = AlbertosCore;
 			sourceTree = "<group>";
@@ -80,6 +87,32 @@
 				0D25FF2828F96DD8001B7682 /* MenuGroupingTests.swift */,
 			);
 			path = AlbertosCoreTests;
+			sourceTree = "<group>";
+		};
+		0D25FF2A28F978D2001B7682 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FF2F28F97A12001B7682 /* Feature */,
+				0D25FF3028F97A1F001B7682 /* Domain */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		0D25FF2F28F97A12001B7682 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FF2B28F978FA001B7682 /* MenuItem.swift */,
+				0D25FF2D28F97921001B7682 /* MenuSection.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		0D25FF3028F97A1F001B7682 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FF3128F97A42001B7682 /* MenuGrouping.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +177,7 @@
 				TargetAttributes = {
 					0D25FF0F28F96AE5001B7682 = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
 					};
 					0D25FF1728F96AE6001B7682 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -191,6 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D25FF2E28F97921001B7682 /* MenuSection.swift in Sources */,
+				0D25FF2C28F978FA001B7682 /* MenuItem.swift in Sources */,
+				0D25FF3228F97A42001B7682 /* MenuGrouping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +372,7 @@
 		0D25FF2328F96AE6001B7682 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -356,6 +394,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -363,6 +402,7 @@
 		0D25FF2428F96AE6001B7682 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -391,6 +431,7 @@
 		0D25FF2628F96AE6001B7682 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RZ2BKVSB8Y;
@@ -406,6 +447,7 @@
 		0D25FF2728F96AE6001B7682 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RZ2BKVSB8Y;

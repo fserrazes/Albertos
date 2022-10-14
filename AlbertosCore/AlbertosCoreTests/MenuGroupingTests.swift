@@ -2,22 +2,7 @@
 //  Copyright © 2022 Flavio Serrazes. All rights reserved.
 
 import XCTest
-
-struct MenuItem {
-    let category: String
-    let name: String
-}
-
-struct MenuSection {
-    let category: String
-    let items: [MenuItem]
-}
-
-func groupMenuByCategory(_ menu: [MenuItem]) -> [MenuSection] {
-    return Dictionary(grouping: menu, by: { $0.category }).map { key, value in
-        MenuSection(category: key, items: value)
-    }.sorted { $0.category > $1.category }
-}
+import AlbertosCore
                         
 final class MenuGroupingTests: XCTestCase {
     
