@@ -9,3 +9,9 @@ extension MenuItem {
         MenuItem(category: category, name: name, spicy: spicy, price: price)
     }
 }
+
+extension MenuSection {
+    static func fixture(category: String = "any category", items: [MenuItem] = [.fixture()]) -> Self {
+        MenuSection(category: category, items: items)
+    }
+}
