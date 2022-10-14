@@ -3,7 +3,9 @@
 
 import Foundation
 
-public struct MenuSection {
+public struct MenuSection: Identifiable {
+    public var id: String { category }
+    
     public let category: String
     public let items: [MenuItem]
 
