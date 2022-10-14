@@ -4,4 +4,7 @@
    <FileRef
       location = "group:AlbertosCore/AlbertosCore.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Albertos/Albertos.xcodeproj">
+   </FileRef>
 </Workspace>

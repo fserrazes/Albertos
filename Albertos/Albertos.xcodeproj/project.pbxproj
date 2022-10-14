@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D25FF8B28F998C4001B7682 /* AlbertosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FF8A28F998C4001B7682 /* AlbertosApp.swift */; };
+		0D25FF8D28F998C4001B7682 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FF8C28F998C4001B7682 /* ContentView.swift */; };
+		0D25FF8F28F998C6001B7682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D25FF8E28F998C6001B7682 /* Assets.xcassets */; };
+		0D25FF9228F998C6001B7682 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D25FF9128F998C6001B7682 /* Preview Assets.xcassets */; };
+		0D25FF9C28F998C6001B7682 /* AlbertosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FF9B28F998C6001B7682 /* AlbertosTests.swift */; };
+		0D25FFA628F998C6001B7682 /* AlbertosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFA528F998C6001B7682 /* AlbertosUITests.swift */; };
+		0D25FFA828F998C6001B7682 /* AlbertosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFA728F998C6001B7682 /* AlbertosUITestsLaunchTests.swift */; };
+		0D25FFB628F9998E001B7682 /* AlbertosCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D25FFB528F9998E001B7682 /* AlbertosCore.framework */; };
+		0D25FFB728F9998E001B7682 /* AlbertosCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D25FFB528F9998E001B7682 /* AlbertosCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D25FFBC28F99A36001B7682 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFBB28F99A36001B7682 /* MenuList.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D25FF9828F998C6001B7682 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D25FF7F28F998C4001B7682 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D25FF8628F998C4001B7682;
+			remoteInfo = Albertos;
+		};
+		0D25FFA228F998C6001B7682 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D25FF7F28F998C4001B7682 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D25FF8628F998C4001B7682;
+			remoteInfo = Albertos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0D25FFB828F9998E001B7682 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0D25FFB728F9998E001B7682 /* AlbertosCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0D25FF8728F998C4001B7682 /* Albertos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Albertos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D25FF8A28F998C4001B7682 /* AlbertosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertosApp.swift; sourceTree = "<group>"; };
+		0D25FF8C28F998C4001B7682 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0D25FF8E28F998C6001B7682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0D25FF9128F998C6001B7682 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0D25FF9728F998C6001B7682 /* AlbertosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbertosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D25FF9B28F998C6001B7682 /* AlbertosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertosTests.swift; sourceTree = "<group>"; };
+		0D25FFA128F998C6001B7682 /* AlbertosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbertosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D25FFA528F998C6001B7682 /* AlbertosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertosUITests.swift; sourceTree = "<group>"; };
+		0D25FFA728F998C6001B7682 /* AlbertosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0D25FFB528F9998E001B7682 /* AlbertosCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlbertosCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D25FFBB28F99A36001B7682 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D25FF8428F998C4001B7682 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D25FFB628F9998E001B7682 /* AlbertosCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D25FF9428F998C6001B7682 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D25FF9E28F998C6001B7682 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D25FF7E28F998C4001B7682 = {
+			isa = PBXGroup;
+			children = (
+				0D25FF8928F998C4001B7682 /* Albertos */,
+				0D25FF9A28F998C6001B7682 /* AlbertosTests */,
+				0D25FFA428F998C6001B7682 /* AlbertosUITests */,
+				0D25FF8828F998C4001B7682 /* Products */,
+				0D25FFB428F9998E001B7682 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0D25FF8828F998C4001B7682 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FF8728F998C4001B7682 /* Albertos.app */,
+				0D25FF9728F998C6001B7682 /* AlbertosTests.xctest */,
+				0D25FFA128F998C6001B7682 /* AlbertosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0D25FF8928F998C4001B7682 /* Albertos */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FF8A28F998C4001B7682 /* AlbertosApp.swift */,
+				0D25FF8C28F998C4001B7682 /* ContentView.swift */,
+				0D25FFB928F999F7001B7682 /* Menu */,
+				0D25FF8E28F998C6001B7682 /* Assets.xcassets */,
+				0D25FF9028F998C6001B7682 /* Preview Content */,
+			);
+			path = Albertos;
+			sourceTree = "<group>";
+		};
+		0D25FF9028F998C6001B7682 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FF9128F998C6001B7682 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0D25FF9A28F998C6001B7682 /* AlbertosTests */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FF9B28F998C6001B7682 /* AlbertosTests.swift */,
+			);
+			path = AlbertosTests;
+			sourceTree = "<group>";
+		};
+		0D25FFA428F998C6001B7682 /* AlbertosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FFA528F998C6001B7682 /* AlbertosUITests.swift */,
+				0D25FFA728F998C6001B7682 /* AlbertosUITestsLaunchTests.swift */,
+			);
+			path = AlbertosUITests;
+			sourceTree = "<group>";
+		};
+		0D25FFB428F9998E001B7682 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FFB528F9998E001B7682 /* AlbertosCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D25FFB928F999F7001B7682 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FFBA28F99A03001B7682 /* View */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		0D25FFBA28F99A03001B7682 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FFBB28F99A36001B7682 /* MenuList.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0D25FF8628F998C4001B7682 /* Albertos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D25FFAB28F998C6001B7682 /* Build configuration list for PBXNativeTarget "Albertos" */;
+			buildPhases = (
+				0D25FF8328F998C4001B7682 /* Sources */,
+				0D25FF8428F998C4001B7682 /* Frameworks */,
+				0D25FF8528F998C4001B7682 /* Resources */,
+				0D25FFB828F9998E001B7682 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Albertos;
+			productName = Albertos;
+			productReference = 0D25FF8728F998C4001B7682 /* Albertos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0D25FF9628F998C6001B7682 /* AlbertosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D25FFAE28F998C6001B7682 /* Build configuration list for PBXNativeTarget "AlbertosTests" */;
+			buildPhases = (
+				0D25FF9328F998C6001B7682 /* Sources */,
+				0D25FF9428F998C6001B7682 /* Frameworks */,
+				0D25FF9528F998C6001B7682 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D25FF9928F998C6001B7682 /* PBXTargetDependency */,
+			);
+			name = AlbertosTests;
+			productName = AlbertosTests;
+			productReference = 0D25FF9728F998C6001B7682 /* AlbertosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0D25FFA028F998C6001B7682 /* AlbertosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D25FFB128F998C6001B7682 /* Build configuration list for PBXNativeTarget "AlbertosUITests" */;
+			buildPhases = (
+				0D25FF9D28F998C6001B7682 /* Sources */,
+				0D25FF9E28F998C6001B7682 /* Frameworks */,
+				0D25FF9F28F998C6001B7682 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D25FFA328F998C6001B7682 /* PBXTargetDependency */,
+			);
+			name = AlbertosUITests;
+			productName = AlbertosUITests;
+			productReference = 0D25FFA128F998C6001B7682 /* AlbertosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0D25FF7F28F998C4001B7682 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					0D25FF8628F998C4001B7682 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					0D25FF9628F998C6001B7682 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 0D25FF8628F998C4001B7682;
+					};
+					0D25FFA028F998C6001B7682 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 0D25FF8628F998C4001B7682;
+					};
+				};
+			};
+			buildConfigurationList = 0D25FF8228F998C4001B7682 /* Build configuration list for PBXProject "Albertos" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0D25FF7E28F998C4001B7682;
+			productRefGroup = 0D25FF8828F998C4001B7682 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D25FF8628F998C4001B7682 /* Albertos */,
+				0D25FF9628F998C6001B7682 /* AlbertosTests */,
+				0D25FFA028F998C6001B7682 /* AlbertosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D25FF8528F998C4001B7682 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D25FF9228F998C6001B7682 /* Preview Assets.xcassets in Resources */,
+				0D25FF8F28F998C6001B7682 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D25FF9528F998C6001B7682 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D25FF9F28F998C6001B7682 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D25FF8328F998C4001B7682 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D25FF8D28F998C4001B7682 /* ContentView.swift in Sources */,
+				0D25FFBC28F99A36001B7682 /* MenuList.swift in Sources */,
+				0D25FF8B28F998C4001B7682 /* AlbertosApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D25FF9328F998C6001B7682 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D25FF9C28F998C6001B7682 /* AlbertosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D25FF9D28F998C6001B7682 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D25FFA828F998C6001B7682 /* AlbertosUITestsLaunchTests.swift in Sources */,
+				0D25FFA628F998C6001B7682 /* AlbertosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D25FF9928F998C6001B7682 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D25FF8628F998C4001B7682 /* Albertos */;
+			targetProxy = 0D25FF9828F998C6001B7682 /* PBXContainerItemProxy */;
+		};
+		0D25FFA328F998C6001B7682 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D25FF8628F998C4001B7682 /* Albertos */;
+			targetProxy = 0D25FFA228F998C6001B7682 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D25FFA928F998C6001B7682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0D25FFAA28F998C6001B7682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0D25FFAC28F998C6001B7682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Albertos/Preview Content\"";
+				DEVELOPMENT_TEAM = RZ2BKVSB8Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serrazes.Albertos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0D25FFAD28F998C6001B7682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Albertos/Preview Content\"";
+				DEVELOPMENT_TEAM = RZ2BKVSB8Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serrazes.Albertos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0D25FFAF28F998C6001B7682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RZ2BKVSB8Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serrazes.AlbertosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Albertos.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Albertos";
+			};
+			name = Debug;
+		};
+		0D25FFB028F998C6001B7682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RZ2BKVSB8Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serrazes.AlbertosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Albertos.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Albertos";
+			};
+			name = Release;
+		};
+		0D25FFB228F998C6001B7682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RZ2BKVSB8Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serrazes.AlbertosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Albertos;
+			};
+			name = Debug;
+		};
+		0D25FFB328F998C6001B7682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RZ2BKVSB8Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serrazes.AlbertosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Albertos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D25FF8228F998C4001B7682 /* Build configuration list for PBXProject "Albertos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D25FFA928F998C6001B7682 /* Debug */,
+				0D25FFAA28F998C6001B7682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D25FFAB28F998C6001B7682 /* Build configuration list for PBXNativeTarget "Albertos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D25FFAC28F998C6001B7682 /* Debug */,
+				0D25FFAD28F998C6001B7682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D25FFAE28F998C6001B7682 /* Build configuration list for PBXNativeTarget "AlbertosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D25FFAF28F998C6001B7682 /* Debug */,
+				0D25FFB028F998C6001B7682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D25FFB128F998C6001B7682 /* Build configuration list for PBXNativeTarget "AlbertosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D25FFB228F998C6001B7682 /* Debug */,
+				0D25FFB328F998C6001B7682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0D25FF7F28F998C4001B7682 /* Project object */;
+}
