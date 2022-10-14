@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D25FF8B28F998C4001B7682 /* AlbertosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FF8A28F998C4001B7682 /* AlbertosApp.swift */; };
-		0D25FF8D28F998C4001B7682 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FF8C28F998C4001B7682 /* ContentView.swift */; };
 		0D25FF8F28F998C6001B7682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D25FF8E28F998C6001B7682 /* Assets.xcassets */; };
 		0D25FF9228F998C6001B7682 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D25FF9128F998C6001B7682 /* Preview Assets.xcassets */; };
-		0D25FF9C28F998C6001B7682 /* AlbertosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FF9B28F998C6001B7682 /* AlbertosTests.swift */; };
 		0D25FFA628F998C6001B7682 /* AlbertosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFA528F998C6001B7682 /* AlbertosUITests.swift */; };
 		0D25FFA828F998C6001B7682 /* AlbertosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFA728F998C6001B7682 /* AlbertosUITestsLaunchTests.swift */; };
 		0D25FFB628F9998E001B7682 /* AlbertosCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D25FFB528F9998E001B7682 /* AlbertosCore.framework */; };
@@ -55,11 +53,9 @@
 /* Begin PBXFileReference section */
 		0D25FF8728F998C4001B7682 /* Albertos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Albertos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D25FF8A28F998C4001B7682 /* AlbertosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertosApp.swift; sourceTree = "<group>"; };
-		0D25FF8C28F998C4001B7682 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0D25FF8E28F998C6001B7682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D25FF9128F998C6001B7682 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0D25FF9728F998C6001B7682 /* AlbertosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbertosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D25FF9B28F998C6001B7682 /* AlbertosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertosTests.swift; sourceTree = "<group>"; };
 		0D25FFA128F998C6001B7682 /* AlbertosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbertosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D25FFA528F998C6001B7682 /* AlbertosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertosUITests.swift; sourceTree = "<group>"; };
 		0D25FFA728F998C6001B7682 /* AlbertosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertosUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -120,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				0D25FF8A28F998C4001B7682 /* AlbertosApp.swift */,
-				0D25FF8C28F998C4001B7682 /* ContentView.swift */,
 				0D25FFB928F999F7001B7682 /* Menu */,
 				0D25FF8E28F998C6001B7682 /* Assets.xcassets */,
 				0D25FF9028F998C6001B7682 /* Preview Content */,
@@ -139,7 +134,6 @@
 		0D25FF9A28F998C6001B7682 /* AlbertosTests */ = {
 			isa = PBXGroup;
 			children = (
-				0D25FF9B28F998C6001B7682 /* AlbertosTests.swift */,
 				0D25FFC428F9B459001B7682 /* Menu */,
 			);
 			path = AlbertosTests;
@@ -326,7 +320,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D25FF8D28F998C4001B7682 /* ContentView.swift in Sources */,
 				0D25FFC128F9B0BB001B7682 /* MenuRow.swift in Sources */,
 				0D25FFBC28F99A36001B7682 /* MenuList.swift in Sources */,
 				0D25FF8B28F998C4001B7682 /* AlbertosApp.swift in Sources */,
@@ -338,7 +331,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D25FFC328F9B449001B7682 /* MenuRowViewModelTests.swift in Sources */,
-				0D25FF9C28F998C6001B7682 /* AlbertosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
