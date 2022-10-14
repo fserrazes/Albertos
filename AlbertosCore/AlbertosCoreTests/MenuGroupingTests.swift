@@ -3,11 +3,19 @@
 
 import XCTest
 
-struct MenuItem {}
-struct MenuSection {}
+struct MenuItem {
+    let category: String
+    let name: String
+}
+
+struct MenuSection {
+    let items: [MenuItem]
+}
 
 func groupMenuByCategory(_ menu: [MenuItem]) -> [MenuSection] {
-    return []
+    guard menu.isEmpty == false else { return [] }
+    
+    return [MenuSection(items: menu)]
 }
 final class MenuGroupingTests: XCTestCase {
     
@@ -15,8 +23,18 @@ final class MenuGroupingTests: XCTestCase {
         
     }
     
-    func test_menuWithOneCategory_returnsOneSection() {
+    func test_menuWithOneCategory_returnsOneSection() throws {
+        let menu = [
+            MenuItem(category: "pastas", name: "name"),
+            MenuItem(category: "pastas", name: "other name")
+        ]
         
+        let sections = groupMenuByCategory(menu)
+        
+        XCTAssertEqual(sections.count, 1)
+        let section = try XCTUnwrap(sections.first)
+        XCTAssertEqual(section.items.first?.name, "name")
+        XCTAssertEqual(section.items.last?.name, "other name")
     }
     
     func test_emptyMenu_returnsEmptySections() {
