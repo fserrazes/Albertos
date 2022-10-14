@@ -3,8 +3,14 @@
 
 import XCTest
 
-final class MenuGroupingTests: XCTestCase {
+struct MenuItem {}
+struct MenuSection {}
 
+func groupMenuByCategory(_ menu: [MenuItem]) -> [MenuSection] {
+    return []
+}
+final class MenuGroupingTests: XCTestCase {
+    
     func test_menuWithManyCategories_returnsOneSectionPerCategory() {
         
     }
@@ -14,6 +20,10 @@ final class MenuGroupingTests: XCTestCase {
     }
     
     func test_emptyMenu_returnsEmptySections() {
+        let menu = [MenuItem]()
         
+        let sections = groupMenuByCategory(menu)
+        
+        XCTAssertTrue(sections.isEmpty)
     }
 }
