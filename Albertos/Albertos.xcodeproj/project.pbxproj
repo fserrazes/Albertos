@@ -18,6 +18,7 @@
 		0D25FFC128F9B0BB001B7682 /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFC028F9B0BB001B7682 /* MenuRow.swift */; };
 		0D25FFC328F9B449001B7682 /* MenuRowViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFC228F9B449001B7682 /* MenuRowViewModelTests.swift */; };
 		0D25FFCA28F9B9EE001B7682 /* MenuItem+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFC928F9B9EE001B7682 /* MenuItem+Fixture.swift */; };
+		0D25FFCC28F9CD97001B7682 /* MenuListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFCB28F9CD97001B7682 /* MenuListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		0D25FFC028F9B0BB001B7682 /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 		0D25FFC228F9B449001B7682 /* MenuRowViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowViewModelTests.swift; sourceTree = "<group>"; };
 		0D25FFC928F9B9EE001B7682 /* MenuItem+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuItem+Fixture.swift"; sourceTree = "<group>"; };
+		0D25FFCB28F9CD97001B7682 /* MenuListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +171,8 @@
 		0D25FFBA28F99A03001B7682 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0D25FFBB28F99A36001B7682 /* MenuList.swift */,
 				0D25FFC028F9B0BB001B7682 /* MenuRow.swift */,
+				0D25FFBB28F99A36001B7682 /* MenuList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				0D25FFC228F9B449001B7682 /* MenuRowViewModelTests.swift */,
+				0D25FFCB28F9CD97001B7682 /* MenuListViewModelTests.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D25FFC328F9B449001B7682 /* MenuRowViewModelTests.swift in Sources */,
+				0D25FFCC28F9CD97001B7682 /* MenuListViewModelTests.swift in Sources */,
 				0D25FFCA28F9B9EE001B7682 /* MenuItem+Fixture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
