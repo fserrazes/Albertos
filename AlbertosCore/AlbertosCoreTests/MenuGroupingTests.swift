@@ -9,18 +9,34 @@ struct MenuItem {
 }
 
 struct MenuSection {
+    let category: String
     let items: [MenuItem]
 }
 
 func groupMenuByCategory(_ menu: [MenuItem]) -> [MenuSection] {
     guard menu.isEmpty == false else { return [] }
     
-    return [MenuSection(items: menu)]
+    return Dictionary(grouping: menu, by: { $0.category }).map { key, value in
+        MenuSection(category: key, items: value)
+    }
 }
+                        
 final class MenuGroupingTests: XCTestCase {
     
     func test_menuWithManyCategories_returnsOneSectionPerCategory() {
+        let menu = [
+            MenuItem(category: "pastas", name: "a pasta"),
+            MenuItem(category: "drinks", name: "a drink"),
+            MenuItem(category: "pastas", name: "another pasta"),
+            MenuItem(category: "desserts", name: "a dessert")
+        ]
         
+        let sections = groupMenuByCategory(menu)
+        
+        XCTAssertEqual(sections.count, 3)
+        XCTAssertEqual(sections[safe: 0]?.category, "pastas")
+        XCTAssertEqual(sections[safe: 1]?.category, "drinks")
+        XCTAssertEqual(sections[safe: 2]?.category, "desserts")
     }
     
     func test_menuWithOneCategory_returnsOneSection() throws {
@@ -43,5 +59,11 @@ final class MenuGroupingTests: XCTestCase {
         let sections = groupMenuByCategory(menu)
         
         XCTAssertTrue(sections.isEmpty)
+    }
+}
+
+extension Collection {
+    subscript(safe index: Index) -> Element? {
+        indices.contains(index) ? self[index] : nil
     }
 }
