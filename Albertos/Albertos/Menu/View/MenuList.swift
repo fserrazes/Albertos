@@ -9,32 +9,39 @@ struct MenuList: View {
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        List {
-            ForEach(viewModel.sections) { section in
-                Section(header: Text(section.category)) {
-                    ForEach(section.items) { item in
-                        MenuRow(viewModel: .init(item: item))
+        switch viewModel.sections {
+            case .success(let sections):
+                List {
+                    ForEach(sections) { section in
+                        Section(header: Text(section.category)) {
+                            ForEach(section.items) { item in
+                                MenuRow(viewModel: .init(item: item))
+                            }
+                        }
                     }
                 }
-            }
+            case .failure(let error):
+                Text("An error occurred:")
+                    .foregroundColor(.red)
+                Text(error.localizedDescription)
+                    .italic()
         }
     }
 }
 
 extension MenuList {
     class ViewModel: ObservableObject {
-        @Published private (set) var sections: [MenuSection]
+        @Published private (set) var sections: Result<[MenuSection], Error> = .success([])
 
         private  var cancellables = Set<AnyCancellable>()
         
         init(menuFetching: MenuFetching,
              menuGrouping: @escaping ([MenuItem]) -> [MenuSection] = groupMenuByCategory) {
-            self.sections = []
             menuFetching
                 .fetchMenu()
                 .sink( receiveCompletion: { _ in },
                        receiveValue: { [weak self] value in
-                    self?.sections = menuGrouping(value)
+                    self?.sections = .success(menuGrouping(value))
                 })
                 .store(in: &cancellables)
 

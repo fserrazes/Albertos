@@ -18,17 +18,20 @@ final class MenuListViewModelTests: XCTestCase {
             called = true
             return inputSections
         }
-        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingPlaceholder(), menuGrouping: spyClosure)
-        let sections = viewModel.sections
+        
+        let menuFetchingStub = MenuFetchingStub(returning: .success([.fixture()]))
+        let viewModel = MenuList.ViewModel(menuFetching: menuFetchingStub, menuGrouping: spyClosure)
+        let sections =  try viewModel.sections.get()
         
         XCTAssertTrue(called, "check that the given closure was called")
         XCTAssertEqual(sections, inputSections, "returns value from closure")
     }
     
-    func test_whenFetchingStarts_publishesEmptyMenu() {
-        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingPlaceholder())
+    func test_whenFetchingStarts_publishesEmptyMenu() throws {
+        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingStub(returning: .success([.fixture()])))
+        let sections =  try viewModel.sections.get()
         
-        XCTAssertTrue(viewModel.sections.isEmpty)
+        XCTAssertTrue(sections.isEmpty)
     }
     
     func test_whenFetchingMenuSucceedsAndGroupingByCategory_publishesSectionsBuiltFromReceivedMenuAndGivenGroupingClosure() {
@@ -50,11 +53,15 @@ final class MenuListViewModelTests: XCTestCase {
             .$sections
             .dropFirst()
             .sink { value in
+                guard case .success(let sections) = value else {
+                    return XCTFail("Expected a successful result, got: \(value) instead")
+                }
+                
                 // Ensure the grouping closure is called with the received menu
                 XCTAssertEqual(receivedMenu, expectedMenu)
                 
                 // Ensure the published value is the result of the grouping closure
-                XCTAssertEqual(value, expectedSections)
+                XCTAssertEqual(sections, expectedSections)
                 expectation.fulfill()
             }
             .store(in: &cancellables)
