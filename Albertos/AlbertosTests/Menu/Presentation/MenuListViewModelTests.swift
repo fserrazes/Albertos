@@ -2,10 +2,12 @@
 //  Copyright © 2022 Flavio Serrazes. All rights reserved.
 
 import XCTest
+import Combine
 import AlbertosCore
 @testable import Albertos
 
 final class MenuListViewModelTests: XCTestCase {
+    var cancellables = Set<AnyCancellable>()
 
     func test_callsGivenGroupingFunction() throws {
         try XCTSkipIf(true, "skipping this for now, keeping it to reuse part of the code later on")
@@ -29,12 +31,32 @@ final class MenuListViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.sections.isEmpty)
     }
     
-    func test_whenFecthingMenuSucceedsAndGroupingByCategory_publishesSectionsBuiltFromReceivedMenu() {
-        // Arrange the ViewModel and its data source
+    func test_whenFetchingMenuSucceedsAndGroupingByCategory_publishesSectionsBuiltFromReceivedMenuAndGivenGroupingClosure() {
+        var receivedMenu: [MenuItem]?
+        let expectedSections = [MenuSection.fixture()]
         
-        // Act on the ViewModel to trigger the update
+        let spyClosure: ([MenuItem]) -> [MenuSection] = { items in
+            receivedMenu = items
+            return expectedSections
+        }
         
-        // Assert the expected behavior
+        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingPlaceholder(), menuGrouping: spyClosure)
+        let expectation = XCTestExpectation(description: "Publishes sections built from received menu and given grouping closure")
+        
+        viewModel
+            .$sections
+            .dropFirst()
+            .sink { value in
+                // Ensure the grouping closure is called with the received menu
+                XCTAssertEqual(receivedMenu, menu)
+                
+                // Ensure the published value is the result of the grouping closure
+                XCTAssertEqual(value, expectedSections)
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        
+        wait(for: [expectation], timeout: 1)
     }
     
     func test_whenFetchingFails_publishesAnError() {
@@ -43,6 +65,11 @@ final class MenuListViewModelTests: XCTestCase {
     
 }
 
+extension MenuItem: Equatable {
+    public static func == (lhs: MenuItem, rhs: MenuItem) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
 extension MenuSection: Equatable {
     public static func == (lhs: AlbertosCore.MenuSection, rhs: AlbertosCore.MenuSection) -> Bool {
         return lhs.id == rhs.id

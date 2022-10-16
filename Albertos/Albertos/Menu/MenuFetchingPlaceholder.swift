@@ -10,6 +10,6 @@ class MenuFetchingPlaceholder: MenuFetching {
         return Future { $0(.success(menu)) }
         // Use a delay to simulate async fetch
         .delay(for: 0.5, scheduler: RunLoop.main)
-                  .eraseToAnyPublisher()
+        .eraseToAnyPublisher()
     }
 }
