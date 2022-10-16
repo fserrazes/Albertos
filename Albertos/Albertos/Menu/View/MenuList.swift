@@ -39,8 +39,11 @@ extension MenuList {
              menuGrouping: @escaping ([MenuItem]) -> [MenuSection] = groupMenuByCategory) {
             menuFetching
                 .fetchMenu()
-                .sink( receiveCompletion: { _ in },
-                       receiveValue: { [weak self] value in
+                .sink( receiveCompletion: { [weak self] completion in
+                    guard case .failure(let error) = completion else { return }
+                    self?.sections = .failure(error)
+                },
+                receiveValue: { [weak self] value in
                     self?.sections = .success(menuGrouping(value))
                 })
                 .store(in: &cancellables)
