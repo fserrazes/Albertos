@@ -70,7 +70,7 @@ final class MenuListViewModelTests: XCTestCase {
     }
     
     func test_whenFetchingFails_publishesAnError() {
-        let expectedError = TestError(id: 123)
+        let expectedError = anyNSError
         let menuFetchingStub = MenuFetchingStub(returning: .failure(expectedError))
         
         let viewModel = MenuList.ViewModel(menuFetching: menuFetchingStub, menuGrouping: { _ in [] })
@@ -84,13 +84,17 @@ final class MenuListViewModelTests: XCTestCase {
                     return XCTFail("Expected a failing Result, got: \(value) instead")
                 }
                 
-                XCTAssertEqual(error as? TestError, expectedError)
+                XCTAssertEqual(error as NSError, expectedError)
                 expectation.fulfill()
             }
             .store(in: &cancellables)
         
         wait(for: [expectation], timeout: 1)
     }
+}
+
+var anyNSError: NSError {
+    NSError(domain: "any error", code: 0)
 }
 
 extension MenuItem: Equatable {
