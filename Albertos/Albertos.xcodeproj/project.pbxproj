@@ -19,7 +19,6 @@
 		0D25FFC328F9B449001B7682 /* MenuRowViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFC228F9B449001B7682 /* MenuRowViewModelTests.swift */; };
 		0D25FFCA28F9B9EE001B7682 /* Menu+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFC928F9B9EE001B7682 /* Menu+Fixture.swift */; };
 		0D25FFCC28F9CD97001B7682 /* MenuListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFCB28F9CD97001B7682 /* MenuListViewModelTests.swift */; };
-		0D25FFCE28FA049C001B7682 /* MenuFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFCD28FA049C001B7682 /* MenuFetching.swift */; };
 		0D25FFD028FA0713001B7682 /* MenuFetchingPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFCF28FA0713001B7682 /* MenuFetchingPlaceholder.swift */; };
 		0D25FFD328FCA8C0001B7682 /* MenuFetchingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFD228FCA8C0001B7682 /* MenuFetchingStub.swift */; };
 /* End PBXBuildFile section */
@@ -70,7 +69,6 @@
 		0D25FFC228F9B449001B7682 /* MenuRowViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowViewModelTests.swift; sourceTree = "<group>"; };
 		0D25FFC928F9B9EE001B7682 /* Menu+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Menu+Fixture.swift"; sourceTree = "<group>"; };
 		0D25FFCB28F9CD97001B7682 /* MenuListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListViewModelTests.swift; sourceTree = "<group>"; };
-		0D25FFCD28FA049C001B7682 /* MenuFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFetching.swift; sourceTree = "<group>"; };
 		0D25FFCF28FA0713001B7682 /* MenuFetchingPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFetchingPlaceholder.swift; sourceTree = "<group>"; };
 		0D25FFD228FCA8C0001B7682 /* MenuFetchingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFetchingStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				0D25FFBA28F99A03001B7682 /* View */,
-				0D25FFCD28FA049C001B7682 /* MenuFetching.swift */,
 				0D25FFCF28FA0713001B7682 /* MenuFetchingPlaceholder.swift */,
 			);
 			path = Menu;
@@ -353,7 +350,6 @@
 			files = (
 				0D25FFC128F9B0BB001B7682 /* MenuRow.swift in Sources */,
 				0D25FFBC28F99A36001B7682 /* MenuList.swift in Sources */,
-				0D25FFCE28FA049C001B7682 /* MenuFetching.swift in Sources */,
 				0D25FFD028FA0713001B7682 /* MenuFetchingPlaceholder.swift in Sources */,
 				0D25FF8B28F998C4001B7682 /* AlbertosApp.swift in Sources */,
 			);
