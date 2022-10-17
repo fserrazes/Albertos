@@ -17,6 +17,9 @@
 		0D25FFD928FD4F85001B7682 /* MenuItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFD828FD4F85001B7682 /* MenuItemTests.swift */; };
 		0D25FFE328FD5F1D001B7682 /* MenuFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFE228FD5F1C001B7682 /* MenuFetching.swift */; };
 		0D25FFE628FD61CD001B7682 /* MenuFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFE528FD61CD001B7682 /* MenuFetcherTests.swift */; };
+		0D25FFE828FD994C001B7682 /* NetworkFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFE728FD994C001B7682 /* NetworkFetching.swift */; };
+		0D25FFEA28FD9993001B7682 /* URLSession+NetworkFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFE928FD9993001B7682 /* URLSession+NetworkFetching.swift */; };
+		0D4AF23728FD9AA300605367 /* NetworkFetchingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF23628FD9AA300605367 /* NetworkFetchingStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,9 @@
 		0D25FFD828FD4F85001B7682 /* MenuItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTests.swift; sourceTree = "<group>"; };
 		0D25FFE228FD5F1C001B7682 /* MenuFetching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuFetching.swift; sourceTree = "<group>"; };
 		0D25FFE528FD61CD001B7682 /* MenuFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuFetcherTests.swift; path = Networking/MenuFetcherTests.swift; sourceTree = "<group>"; };
+		0D25FFE728FD994C001B7682 /* NetworkFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetching.swift; sourceTree = "<group>"; };
+		0D25FFE928FD9993001B7682 /* URLSession+NetworkFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkFetching.swift"; sourceTree = "<group>"; };
+		0D4AF23628FD9AA300605367 /* NetworkFetchingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchingStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +160,9 @@
 		0D25FFE128FD5F09001B7682 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				0D25FFEB28FD9998001B7682 /* Helpers */,
 				0D25FFE228FD5F1C001B7682 /* MenuFetching.swift */,
+				0D25FFE728FD994C001B7682 /* NetworkFetching.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -162,9 +170,26 @@
 		0D25FFE428FD6191001B7682 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				0D4AF23528FD9A6700605367 /* Helpers */,
 				0D25FFE528FD61CD001B7682 /* MenuFetcherTests.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		0D25FFEB28FD9998001B7682 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FFE928FD9993001B7682 /* URLSession+NetworkFetching.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0D4AF23528FD9A6700605367 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0D4AF23628FD9AA300605367 /* NetworkFetchingStub.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +303,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D25FF2E28F97921001B7682 /* MenuSection.swift in Sources */,
+				0D25FFE828FD994C001B7682 /* NetworkFetching.swift in Sources */,
+				0D25FFEA28FD9993001B7682 /* URLSession+NetworkFetching.swift in Sources */,
 				0D25FF2C28F978FA001B7682 /* MenuItem.swift in Sources */,
 				0D25FFE328FD5F1D001B7682 /* MenuFetching.swift in Sources */,
 				0D25FF3228F97A42001B7682 /* MenuGrouping.swift in Sources */,
@@ -290,6 +317,7 @@
 			files = (
 				0D25FF2928F96DD8001B7682 /* MenuGroupingTests.swift in Sources */,
 				0D25FFD928FD4F85001B7682 /* MenuItemTests.swift in Sources */,
+				0D4AF23728FD9AA300605367 /* NetworkFetchingStub.swift in Sources */,
 				0D25FFE628FD61CD001B7682 /* MenuFetcherTests.swift in Sources */,
 				0D25FFBE28F9A882001B7682 /* MenuItem+Fixture.swift in Sources */,
 			);
