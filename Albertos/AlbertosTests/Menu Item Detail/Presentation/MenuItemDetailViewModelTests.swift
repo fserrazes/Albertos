@@ -29,7 +29,15 @@ final class MenuItemDetailViewModelTests: XCTestCase {
     }
     
     func test_whenItemIsInOrder_ButtonActionRemovesIt() {
+        let item = MenuItem.fixture()
+        let orderController = OrderController()
+        orderController.addToOrder(item: item)
+        let viewModel = MenuItemDetail.ViewModel(item: item, orderController: orderController)
         
+        viewModel.addOrRemoveFromOrder()
+        
+        XCTAssertFalse(orderController.order.items.contains { $0 ==
+        item })
     }
     
     func test_whenItemIsNotInOrder_ButtonActionAddsIt() {

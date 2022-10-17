@@ -38,8 +38,17 @@ extension MenuItemDetail {
                 }
                 .store(in: &cancellables)
         }
+        
+        func addOrRemoveFromOrder() {
+            if (orderController.order.items.contains { $0 == item }) {
+                orderController.removeFromOrder(item: item)
+            } else {
+                orderController.addToOrder(item: item)
+            }
+        }
     }
 }
+
 struct MenuItemDetail_Previews: PreviewProvider {
     static var previews: some View {
         MenuItemDetail()

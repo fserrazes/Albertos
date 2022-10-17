@@ -21,7 +21,15 @@ public class OrderController: ObservableObject {
         order = Order(items: order.items + [item])
     }
     
-    func removeFromOrder(item: MenuItem) {
-        
+    public func removeFromOrder(item: MenuItem) {
+        let items = order.items
+        guard let indexToRemove = items.firstIndex(where: { $0.name == item.name }) else { return }
+
+        let newItems = items.enumerated().compactMap { (index, element) -> MenuItem? in
+            guard index == indexToRemove else { return element }
+            return .none
+        }
+
+        order = Order(items: newItems)
     }
 }
