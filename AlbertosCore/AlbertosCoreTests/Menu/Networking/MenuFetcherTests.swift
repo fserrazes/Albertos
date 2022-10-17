@@ -35,9 +35,34 @@ class MenuFetcher: MenuFetching {
 }
 
 final class MenuFetcherTests: XCTestCase {
-
-    func test_whenRequestSucceeds_publishesDecodedMenuItems() {
+    var cancellables = Set<AnyCancellable>()
+    
+    func test_whenRequestSucceeds_publishesDecodedMenuItems() throws {
+        let json = """
+        [
+            { "name": "a name", "category": "a category", "spicy": true, "price": 1.0 },
+            { "name": "another name", "category": "a category", "spicy": true, "price": 2.0 }
+        ]
+        """
+        let data = try XCTUnwrap(json.data(using: .utf8))
+        let menuFetcher = MenuFetcher(networkFetching: NetworkFetchingStub(returning: .success(data)))
+        let expectation = XCTestExpectation(description: "Publishes decoded [MenuItem]")
         
+        menuFetcher
+            .fetchMenu()
+            .sink(
+                receiveCompletion: { _ in },
+                receiveValue: { items in
+                    XCTAssertEqual(items.count, 2)
+                    XCTAssertEqual(items.first?.name, "a name")
+                    XCTAssertEqual(items.last?.name, "another name")
+                    
+                    expectation.fulfill()
+                }
+            )
+            .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 1)
     }
     
     func test_whenRequestFails_publishesReceivedError() {
@@ -72,9 +97,8 @@ final class MenuFetcherTests: XCTestCase {
         func load(_ request: URLRequest) -> AnyPublisher<Data, URLError> {
             return result.publisher
             // Use a delay to simulate the real world async behavior
-            .delay(for: 0.01, scheduler: RunLoop.main)
+            .delay(for: 0.1, scheduler: RunLoop.main)
             .eraseToAnyPublisher()
         }
     }
-    
 }
