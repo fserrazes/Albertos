@@ -2,11 +2,21 @@
 //  Copyright © 2022 Flavio Serrazes. All rights reserved.
 
 import XCTest
+import AlbertosCore
+@testable import Albertos
 
 final class MenuItemDetailViewModelTests: XCTestCase {
 
     func test_whenItemIsInOrder_ButtonSaysRemove() {
+        let item = MenuItem.fixture()
+        let orderController = OrderController()
+        orderController.addToOrder(item: item)
         
+        let viewModel = MenuItemDetail.ViewModel(item: item, orderController: orderController)
+        
+        let text = viewModel.addOrRemoveFromOrderButtonText
+        
+        XCTAssertEqual(text, "Remove from order")
     }
     
     func test_whenItemIsNotInOrder_ButtonSaysAdd() {

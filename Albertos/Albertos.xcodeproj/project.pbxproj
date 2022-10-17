@@ -23,6 +23,7 @@
 		0D4AF25028FDA9A800605367 /* MenuFetchingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF24B28FDA9A800605367 /* MenuFetchingStub.swift */; };
 		0D4AF25128FDA9A800605367 /* Menu+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF24D28FDA9A800605367 /* Menu+Fixture.swift */; };
 		0D4AF25428FDAA0300605367 /* MenuItemDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF25328FDAA0300605367 /* MenuItemDetailViewModelTests.swift */; };
+		0D4AF25E28FDACE200605367 /* MenuItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF25D28FDACE200605367 /* MenuItemDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		0D4AF24B28FDA9A800605367 /* MenuFetchingStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuFetchingStub.swift; sourceTree = "<group>"; };
 		0D4AF24D28FDA9A800605367 /* Menu+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Menu+Fixture.swift"; sourceTree = "<group>"; };
 		0D4AF25328FDAA0300605367 /* MenuItemDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewModelTests.swift; sourceTree = "<group>"; };
+		0D4AF25D28FDACE200605367 /* MenuItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				0D25FF8A28F998C4001B7682 /* AlbertosApp.swift */,
 				0D25FFB928F999F7001B7682 /* Menu */,
+				0D4AF25B28FDACB500605367 /* Menu Item Detail */,
 				0D25FF8E28F998C6001B7682 /* Assets.xcassets */,
 				0D25FF9028F998C6001B7682 /* Preview Content */,
 			);
@@ -140,7 +143,6 @@
 			children = (
 				0D4AF23828FD9DDE00605367 /* DataModel.swift */,
 				0D25FFCF28FA0713001B7682 /* MenuFetchingPlaceholder.swift */,
-				0D25FFBA28F99A03001B7682 /* View */,
 				0D25FF9128F998C6001B7682 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -175,6 +177,7 @@
 		0D25FFB928F999F7001B7682 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				0D25FFBA28F99A03001B7682 /* View */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -237,6 +240,22 @@
 				0D4AF25328FDAA0300605367 /* MenuItemDetailViewModelTests.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0D4AF25B28FDACB500605367 /* Menu Item Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0D4AF25C28FDACC500605367 /* View */,
+			);
+			name = "Menu Item Detail";
+			sourceTree = "<group>";
+		};
+		0D4AF25C28FDACC500605367 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D4AF25D28FDACE200605367 /* MenuItemDetail.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D4AF25E28FDACE200605367 /* MenuItemDetail.swift in Sources */,
 				0D4AF23928FD9DDE00605367 /* DataModel.swift in Sources */,
 				0D25FFC128F9B0BB001B7682 /* MenuRow.swift in Sources */,
 				0D25FFBC28F99A36001B7682 /* MenuList.swift in Sources */,
