@@ -18,3 +18,9 @@ public struct MenuItem: Identifiable, Decodable {
         self.price = price
     }
 }
+
+extension MenuItem: Equatable {
+    public static func == (lhs: MenuItem, rhs: MenuItem) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

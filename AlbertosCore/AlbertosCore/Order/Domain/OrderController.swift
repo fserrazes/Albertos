@@ -4,7 +4,10 @@
 import Foundation
 
 public class OrderController: ObservableObject {
-    @Published private(set) var order: Order
+    @Published public private(set) var order: Order
+    
+    public var items: [MenuItem] { order.items }
+    public var total: Double { order.total }
     
     public init(order: Order = Order(items: [])) {
         self.order = order
@@ -15,7 +18,7 @@ public class OrderController: ObservableObject {
     }
     
     public func addToOrder(item: MenuItem) {
-        
+        order = Order(items: order.items + [item])
     }
     
     func removeFromOrder(item: MenuItem) {

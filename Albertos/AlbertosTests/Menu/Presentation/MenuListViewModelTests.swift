@@ -97,11 +97,6 @@ var anyNSError: NSError {
     NSError(domain: "any error", code: 0)
 }
 
-extension MenuItem: Equatable {
-    public static func == (lhs: MenuItem, rhs: MenuItem) -> Bool {
-        return lhs.id == rhs.id
-    }
-}
 extension MenuSection: Equatable {
     public static func == (lhs: AlbertosCore.MenuSection, rhs: AlbertosCore.MenuSection) -> Bool {
         return lhs.id == rhs.id

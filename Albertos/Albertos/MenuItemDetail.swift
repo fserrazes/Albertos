@@ -2,6 +2,7 @@
 //  Copyright © 2022 Flavio Serrazes. All rights reserved.
 
 import SwiftUI
+import Combine
 import AlbertosCore
 
 struct MenuItemDetail: View {
@@ -11,18 +12,31 @@ struct MenuItemDetail: View {
 }
 
 extension MenuItemDetail {
-    struct ViewModel {
+    class ViewModel {
         private let item: MenuItem
         private let orderController: OrderController
         
         // TODO: Using default value for OrderController while working on the ViewModel implementation.
         // We'll remove it once done and inject it from the view.
-        let addOrRemoveFromOrderButtonText = "Remove from order"
+        @Published private(set) var addOrRemoveFromOrderButtonText = "Remove from order"
         
+        private var cancellables = Set<AnyCancellable>()
         
         init(item: MenuItem, orderController: OrderController = OrderController()) {
             self.item = item
             self.orderController = orderController
+            
+            self.orderController.$order
+                .sink { [weak self] order in
+                    guard let self = self else { return }
+
+                    if (order.items.contains { $0 == self.item }) {
+                        self.addOrRemoveFromOrderButtonText = "Remove from order"
+                    } else {
+                        self.addOrRemoveFromOrderButtonText = "Add to order"
+                    }
+                }
+                .store(in: &cancellables)
         }
     }
 }
