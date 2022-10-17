@@ -15,6 +15,8 @@
 		0D25FF3228F97A42001B7682 /* MenuGrouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FF3128F97A42001B7682 /* MenuGrouping.swift */; };
 		0D25FFBE28F9A882001B7682 /* MenuItem+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFBD28F9A882001B7682 /* MenuItem+Fixture.swift */; };
 		0D25FFD928FD4F85001B7682 /* MenuItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFD828FD4F85001B7682 /* MenuItemTests.swift */; };
+		0D25FFE328FD5F1D001B7682 /* MenuFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFE228FD5F1C001B7682 /* MenuFetching.swift */; };
+		0D25FFE628FD61CD001B7682 /* MenuFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFE528FD61CD001B7682 /* MenuFetcherTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		0D25FF3128F97A42001B7682 /* MenuGrouping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGrouping.swift; sourceTree = "<group>"; };
 		0D25FFBD28F9A882001B7682 /* MenuItem+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuItem+Fixture.swift"; sourceTree = "<group>"; };
 		0D25FFD828FD4F85001B7682 /* MenuItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTests.swift; sourceTree = "<group>"; };
+		0D25FFE228FD5F1C001B7682 /* MenuFetching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuFetching.swift; sourceTree = "<group>"; };
+		0D25FFE528FD61CD001B7682 /* MenuFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuFetcherTests.swift; path = Networking/MenuFetcherTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 			children = (
 				0D25FF2F28F97A12001B7682 /* Feature */,
 				0D25FF3028F97A1F001B7682 /* Domain */,
+				0D25FFE128FD5F09001B7682 /* Networking */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			children = (
 				0D25FFBF28F9A896001B7682 /* Helpers */,
 				0D25FFD728FD4F76001B7682 /* Domain */,
+				0D25FFE428FD6191001B7682 /* Networking */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -143,6 +149,22 @@
 				0D25FFD828FD4F85001B7682 /* MenuItemTests.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		0D25FFE128FD5F09001B7682 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FFE228FD5F1C001B7682 /* MenuFetching.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0D25FFE428FD6191001B7682 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0D25FFE528FD61CD001B7682 /* MenuFetcherTests.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +279,7 @@
 			files = (
 				0D25FF2E28F97921001B7682 /* MenuSection.swift in Sources */,
 				0D25FF2C28F978FA001B7682 /* MenuItem.swift in Sources */,
+				0D25FFE328FD5F1D001B7682 /* MenuFetching.swift in Sources */,
 				0D25FF3228F97A42001B7682 /* MenuGrouping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +290,7 @@
 			files = (
 				0D25FF2928F96DD8001B7682 /* MenuGroupingTests.swift in Sources */,
 				0D25FFD928FD4F85001B7682 /* MenuItemTests.swift in Sources */,
+				0D25FFE628FD61CD001B7682 /* MenuFetcherTests.swift in Sources */,
 				0D25FFBE28F9A882001B7682 /* MenuItem+Fixture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,8 +3,7 @@
 
 import Combine
 import Foundation
-import AlbertosCore
 
-protocol MenuFetching {
+public protocol MenuFetching {
     func fetchMenu() -> AnyPublisher<[MenuItem], Error>
 }
