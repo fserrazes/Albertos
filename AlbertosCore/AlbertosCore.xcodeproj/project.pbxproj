@@ -88,7 +88,6 @@
 		0D25FF1C28F96AE6001B7682 /* AlbertosCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				0D25FFBF28F9A896001B7682 /* Helpers */,
 				0D25FFD628FD4F68001B7682 /* Menu */,
 			);
 			path = AlbertosCoreTests;
@@ -131,6 +130,7 @@
 		0D25FFD628FD4F68001B7682 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				0D25FFBF28F9A896001B7682 /* Helpers */,
 				0D25FFD728FD4F76001B7682 /* Domain */,
 			);
 			path = Menu;

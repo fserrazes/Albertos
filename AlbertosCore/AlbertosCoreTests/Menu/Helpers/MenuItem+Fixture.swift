@@ -8,4 +8,15 @@ extension MenuItem {
     public static func fixture(category: String = "category", name: String = "name", spicy: Bool = false, price: Double = 0.0) -> MenuItem {
         MenuItem(category: category, name: name, spicy: spicy, price: price)
     }
+    
+    public static func jsonFixture(name: String = "any name", category: String = "any category", spicy: Bool = false, price: Double = 0.0) -> String {
+        """
+        {
+            "name": "\(name)",
+            "category": "\(category)",
+            "spicy": \(spicy),
+            "price": \(price)
+        }
+        """
+    }
 }

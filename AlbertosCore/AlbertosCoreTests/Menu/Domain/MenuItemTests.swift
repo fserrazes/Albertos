@@ -7,7 +7,7 @@ import AlbertosCore
 final class MenuItemTests: XCTestCase {
     
     func test_whenDecodedFromJSONData_hasAllTheInputProperties() throws {
-        let json = #"{ "name": "a name", "category": "a category", "spicy": true }"#
+        let json = MenuItem.jsonFixture(name: "a name", category: "a category", spicy: true)
         let data = try XCTUnwrap(json.data(using: .utf8))
         
         let item = try JSONDecoder() .decode(MenuItem.self, from: data)
