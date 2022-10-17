@@ -137,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				0D4AF23828FD9DDE00605367 /* DataModel.swift */,
+				0D25FFCF28FA0713001B7682 /* MenuFetchingPlaceholder.swift */,
+				0D25FFBA28F99A03001B7682 /* View */,
 				0D25FF9128F998C6001B7682 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -170,8 +172,6 @@
 		0D25FFB928F999F7001B7682 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				0D25FFBA28F99A03001B7682 /* View */,
-				0D25FFCF28FA0713001B7682 /* MenuFetchingPlaceholder.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
