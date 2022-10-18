@@ -29,6 +29,7 @@
 		0D4AF26928FE9C9200605367 /* MenuList+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF26828FE9C9200605367 /* MenuList+ViewModel.swift */; };
 		0D4AF27328FEA9CD00605367 /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF27228FEA9CD00605367 /* OrderButton.swift */; };
 		0D4AF27728FEB25300605367 /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF27628FEB25300605367 /* OrderDetail.swift */; };
+		0D4AF27B28FEB72800605367 /* OrderButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF27A28FEB72800605367 /* OrderButtonViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		0D4AF26828FE9C9200605367 /* MenuList+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuList+ViewModel.swift"; sourceTree = "<group>"; };
 		0D4AF27228FEA9CD00605367 /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		0D4AF27628FEB25300605367 /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
+		0D4AF27A28FEB72800605367 /* OrderButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButtonViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				0D4AF24C28FDA9A800605367 /* Helpers */,
 				0D4AF24628FDA9A800605367 /* Menu */,
 				0D4AF25228FDA9C700605367 /* Menu Item Detail */,
+				0D4AF27828FEB6FB00605367 /* Order Detail */,
 			);
 			path = AlbertosTests;
 			sourceTree = "<group>";
@@ -321,6 +324,22 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		0D4AF27828FEB6FB00605367 /* Order Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0D4AF27928FEB71300605367 /* Presentation */,
+			);
+			path = "Order Detail";
+			sourceTree = "<group>";
+		};
+		0D4AF27928FEB71300605367 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0D4AF27A28FEB72800605367 /* OrderButtonViewModelTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -473,6 +492,7 @@
 				0D4AF25128FDA9A800605367 /* Menu+Fixture.swift in Sources */,
 				0D4AF24E28FDA9A800605367 /* MenuRowViewModelTests.swift in Sources */,
 				0D4AF25428FDAA0300605367 /* MenuItemDetailViewModelTests.swift in Sources */,
+				0D4AF27B28FEB72800605367 /* OrderButtonViewModelTests.swift in Sources */,
 				0D4AF24F28FDA9A800605367 /* MenuListViewModelTests.swift in Sources */,
 				0D4AF25028FDA9A800605367 /* MenuFetchingStub.swift in Sources */,
 			);
