@@ -14,7 +14,7 @@ public class OrderController: ObservableObject {
     }
     
     public func isItemInOrder(_ item: MenuItem) -> Bool {
-        return false
+        return order.items.contains { $0 == item }
     }
     
     public func addToOrder(item: MenuItem) {
