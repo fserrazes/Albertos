@@ -30,6 +30,7 @@
 		0D4AF27328FEA9CD00605367 /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF27228FEA9CD00605367 /* OrderButton.swift */; };
 		0D4AF27728FEB25300605367 /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF27628FEB25300605367 /* OrderDetail.swift */; };
 		0D4AF27B28FEB72800605367 /* OrderButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF27A28FEB72800605367 /* OrderButtonViewModelTests.swift */; };
+		0D4AF27D28FEBC9800605367 /* XCTestCase+MemoryLeaksTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF27C28FEBC9800605367 /* XCTestCase+MemoryLeaksTracking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		0D4AF27228FEA9CD00605367 /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		0D4AF27628FEB25300605367 /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		0D4AF27A28FEB72800605367 /* OrderButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButtonViewModelTests.swift; sourceTree = "<group>"; };
+		0D4AF27C28FEBC9800605367 /* XCTestCase+MemoryLeaksTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeaksTracking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				0D4AF24D28FDA9A800605367 /* Menu+Fixture.swift */,
+				0D4AF27C28FEBC9800605367 /* XCTestCase+MemoryLeaksTracking.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				0D4AF25128FDA9A800605367 /* Menu+Fixture.swift in Sources */,
 				0D4AF24E28FDA9A800605367 /* MenuRowViewModelTests.swift in Sources */,
 				0D4AF25428FDAA0300605367 /* MenuItemDetailViewModelTests.swift in Sources */,
+				0D4AF27D28FEBC9800605367 /* XCTestCase+MemoryLeaksTracking.swift in Sources */,
 				0D4AF27B28FEB72800605367 /* OrderButtonViewModelTests.swift in Sources */,
 				0D4AF24F28FDA9A800605367 /* MenuListViewModelTests.swift in Sources */,
 				0D4AF25028FDA9A800605367 /* MenuFetchingStub.swift in Sources */,

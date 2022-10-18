@@ -30,6 +30,9 @@ final class OrderButtonViewModelTests: XCTestCase {
         let orderController = OrderController()
         let sut = OrderButton.ViewModel(orderController: orderController)
      
+        trackForMemoryLeaks(orderController, file: file, line: line)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        
         return (sut, orderController)
     }
 }
