@@ -26,5 +26,9 @@ extension OrderDetail {
             
             self.menuListItems = orderController.order.items
         }
+        
+        func checkout() {
+            paymentProcessor.process(order: orderController.order)
+        }
     }
 }
