@@ -14,6 +14,12 @@ final class OrderDetailViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.headerText, "Your Order")
     }
     
+    func test_emptyMenu_FallbackText() {
+        let viewModel = OrderDetail.ViewModel(orderController: OrderController(), paymentProcessor: PaymentProcessingSpy())
+
+        XCTAssertEqual(viewModel.emptyMenuFallbackText, "Add dishes to the order to see them here")
+    }
+    
     func test_whenOrderIsEmpty_ShouldNotShowTotalAmount() {
         let viewModel = OrderDetail.ViewModel(orderController: OrderController(), paymentProcessor: PaymentProcessingSpy())
         
