@@ -33,6 +33,7 @@
 		0D4AF27D28FEBC9800605367 /* XCTestCase+MemoryLeaksTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF27C28FEBC9800605367 /* XCTestCase+MemoryLeaksTracking.swift */; };
 		0D4AF28128FEBFAD00605367 /* OrderDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF28028FEBFAD00605367 /* OrderDetailViewModelTests.swift */; };
 		0DC7C51028FEF5400072C5DB /* OrderDetail+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C50F28FEF5400072C5DB /* OrderDetail+ViewModel.swift */; };
+		0DC7C51328FEF9B50072C5DB /* PaymentProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51228FEF9B40072C5DB /* PaymentProcessing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		0D4AF27C28FEBC9800605367 /* XCTestCase+MemoryLeaksTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeaksTracking.swift"; sourceTree = "<group>"; };
 		0D4AF28028FEBFAD00605367 /* OrderDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewModelTests.swift; sourceTree = "<group>"; };
 		0DC7C50F28FEF5400072C5DB /* OrderDetail+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderDetail+ViewModel.swift"; sourceTree = "<group>"; };
+		0DC7C51228FEF9B40072C5DB /* PaymentProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProcessing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +379,7 @@
 		0DC7C51128FEF8F20072C5DB /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				0DC7C51228FEF9B40072C5DB /* PaymentProcessing.swift */,
 			);
 			name = Payment;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				0DC7C51028FEF5400072C5DB /* OrderDetail+ViewModel.swift in Sources */,
 				0D25FFC128F9B0BB001B7682 /* MenuRow.swift in Sources */,
 				0D25FFBC28F99A36001B7682 /* MenuList.swift in Sources */,
+				0DC7C51328FEF9B50072C5DB /* PaymentProcessing.swift in Sources */,
 				0D25FFD028FA0713001B7682 /* MenuFetchingPlaceholder.swift in Sources */,
 				0D4AF26728FE9C6200605367 /* MenuRow+ViewModel.swift in Sources */,
 				0D25FF8B28F998C4001B7682 /* AlbertosApp.swift in Sources */,
