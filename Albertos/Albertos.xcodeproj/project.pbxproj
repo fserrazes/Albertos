@@ -170,7 +170,7 @@
 				0D4AF24C28FDA9A800605367 /* Helpers */,
 				0D4AF24628FDA9A800605367 /* Menu */,
 				0D4AF25228FDA9C700605367 /* Menu Item Detail */,
-				0D4AF27828FEB6FB00605367 /* Order Detail */,
+				0D4AF27828FEB6FB00605367 /* Order */,
 			);
 			path = AlbertosTests;
 			sourceTree = "<group>";
@@ -327,12 +327,12 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		0D4AF27828FEB6FB00605367 /* Order Detail */ = {
+		0D4AF27828FEB6FB00605367 /* Order */ = {
 			isa = PBXGroup;
 			children = (
 				0D4AF27928FEB71300605367 /* Presentation */,
 			);
-			path = "Order Detail";
+			path = Order;
 			sourceTree = "<group>";
 		};
 		0D4AF27928FEB71300605367 /* Presentation */ = {
