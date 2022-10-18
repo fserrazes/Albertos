@@ -40,13 +40,11 @@ extension MenuItemDetail {
         let spicy: String?
         let price: String
         
-        // TODO: Using default value for OrderController while working on the ViewModel implementation.
-        // We'll remove it once done and inject it from the view.
         @Published private(set) var addOrRemoveFromOrderButtonText = "Remove from order"
         
         private var cancellables = Set<AnyCancellable>()
         
-        init(item: MenuItem, orderController: OrderController = OrderController()) {
+        init(item: MenuItem, orderController: OrderController) {
             self.item = item
             self.orderController = orderController
             
@@ -80,6 +78,6 @@ extension MenuItemDetail {
 struct MenuItemDetail_Previews: PreviewProvider {
     static var previews: some View {
         let item = MenuItem(category: "some category", name: "any name", spicy: true, price: 0.99)
-        MenuItemDetail(viewModel: .init(item: item))
+        MenuItemDetail(viewModel: .init(item: item, orderController: OrderController()))
     }
 }
