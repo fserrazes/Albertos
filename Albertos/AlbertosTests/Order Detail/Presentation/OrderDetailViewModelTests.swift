@@ -81,7 +81,7 @@ final class OrderDetailViewModelTests: XCTestCase {
         
         viewModel.checkout()
         
-        wait(for: [expectation], timeout: 2)
+        wait(for: [expectation], timeout: timeoutForPredicateExpectations)
         
         XCTAssertEqual(viewModel.alertToShow?.title, "")
         XCTAssertEqual(viewModel.alertToShow?.message, "There's been an error with your order. Please contact a waiter.")
@@ -109,11 +109,14 @@ final class OrderDetailViewModelTests: XCTestCase {
         
         func process(order: Order) -> AnyPublisher<Void, Error> {
             return result.publisher
-            // Use a delay to simulate the real world async // behavior
+            // Use a delay to simulate the real world async behavior
             .delay(for: 0.01, scheduler: RunLoop.main)
             .eraseToAnyPublisher()
         }
     }
+    
+    //Using a wait time of around 1 second seems to result in occasional test timeout failures when using `XCTNSPredicateExpectation`.
+    private var timeoutForPredicateExpectations: Double { 2.0 }
 }
 
 extension Order: Equatable {
