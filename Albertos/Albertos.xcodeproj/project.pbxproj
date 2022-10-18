@@ -152,6 +152,7 @@
 				0D4AF25B28FDACB500605367 /* Menu Item Detail */,
 				0D4AF27028FEA9AF00605367 /* Order */,
 				0D4AF27428FEB22900605367 /* Order Detail */,
+				0DC7C51128FEF8F20072C5DB /* Payment */,
 				0D25FF8E28F998C6001B7682 /* Assets.xcassets */,
 				0D25FF9028F998C6001B7682 /* Preview Content */,
 			);
@@ -371,6 +372,13 @@
 				0DC7C50F28FEF5400072C5DB /* OrderDetail+ViewModel.swift */,
 			);
 			name = Presentation;
+			sourceTree = "<group>";
+		};
+		0DC7C51128FEF8F20072C5DB /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Payment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -2,6 +2,7 @@
 //  Copyright © 2022 Flavio Serrazes. All rights reserved.
 
 import AlbertosCore
+import HippoPayments
 
 extension OrderDetail {
     struct ViewModel {
@@ -10,7 +11,18 @@ extension OrderDetail {
         let menuListItems: [MenuItem]
         let totalText: String?
         
-        init(orderController: OrderController) {
+        private let orderController: OrderController
+        private let paymentProcessor: HippoPaymentsProcessor
+        
+        // TODO: Using a default value for HippoPaymentsProcessor // only to make the code compile.
+        // We'll remove it once fully integrated.
+        
+        init(orderController: OrderController, paymentProcessor: HippoPaymentsProcessor = .init(apiKey: "A1B2C3")) {
+            self.orderController = orderController
+            self.paymentProcessor = paymentProcessor
+            
+            
+            
             self.totalText = orderController.order.items.isEmpty ?
                 .none : "Total: $\(String(format: "%.2f", orderController.order.total))"
             

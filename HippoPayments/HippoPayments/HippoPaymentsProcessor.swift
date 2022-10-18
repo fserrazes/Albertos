@@ -5,7 +5,7 @@ import UIKit
 
 public class HippoPaymentsProcessor {
     
-    init(apiKey: String) {
+    public init(apiKey: String) {
         
     }
     
