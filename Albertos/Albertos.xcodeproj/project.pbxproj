@@ -35,6 +35,7 @@
 		0DC7C51028FEF5400072C5DB /* OrderDetail+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C50F28FEF5400072C5DB /* OrderDetail+ViewModel.swift */; };
 		0DC7C51328FEF9B50072C5DB /* PaymentProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51228FEF9B40072C5DB /* PaymentProcessing.swift */; };
 		0DC7C51528FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51428FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift */; };
+		0DC7C51A28FF16B70072C5DB /* OrderButton+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51928FF16B70072C5DB /* OrderButton+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		0DC7C50F28FEF5400072C5DB /* OrderDetail+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderDetail+ViewModel.swift"; sourceTree = "<group>"; };
 		0DC7C51228FEF9B40072C5DB /* PaymentProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProcessing.swift; sourceTree = "<group>"; };
 		0DC7C51428FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HippoPaymentsProcessor+PaymentProcessing.swift"; sourceTree = "<group>"; };
+		0DC7C51928FF16B70072C5DB /* OrderButton+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderButton+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				0D4AF27128FEA9BF00605367 /* View */,
+				0DC7C51828FF16A00072C5DB /* Presentation */,
 			);
 			name = Order;
 			sourceTree = "<group>";
@@ -385,6 +388,14 @@
 				0DC7C51428FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift */,
 			);
 			name = Payment;
+			sourceTree = "<group>";
+		};
+		0DC7C51828FF16A00072C5DB /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0DC7C51928FF16B70072C5DB /* OrderButton+ViewModel.swift */,
+			);
+			name = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,6 +534,7 @@
 				0D4AF27728FEB25300605367 /* OrderDetail.swift in Sources */,
 				0D4AF25E28FDACE200605367 /* MenuItemDetail.swift in Sources */,
 				0D4AF23928FD9DDE00605367 /* DataModel.swift in Sources */,
+				0DC7C51A28FF16B70072C5DB /* OrderButton+ViewModel.swift in Sources */,
 				0DC7C51028FEF5400072C5DB /* OrderDetail+ViewModel.swift in Sources */,
 				0D25FFC128F9B0BB001B7682 /* MenuRow.swift in Sources */,
 				0D25FFBC28F99A36001B7682 /* MenuList.swift in Sources */,

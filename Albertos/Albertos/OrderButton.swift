@@ -2,6 +2,7 @@
 //  Copyright © 2022 Flavio Serrazes. All rights reserved.
 
 import SwiftUI
+import AlbertosCore
 
 struct OrderButton: View {
     @EnvironmentObject var orderController: OrderController
@@ -22,25 +23,6 @@ struct OrderButton: View {
         }
         .sheet(isPresented: $showingDetail) {
             OrderDetail(viewModel: .init(orderController: orderController))
-        }
-    }
-}
-
-import Combine
-import AlbertosCore
-
-extension OrderButton {
-    class ViewModel {
-        @Published private(set) var text = "Your Order"
-        
-        private(set) var cancellables = Set<AnyCancellable>()
-        
-        init(orderController: OrderController) {
-            orderController.$order
-                .sink { [weak self] order in
-                    self?.text = order.items.isEmpty ? "Your Order" : "Your Order $\(String(format: "%.2f", order.total))"
-                }
-                .store(in: &cancellables)
         }
     }
 }
