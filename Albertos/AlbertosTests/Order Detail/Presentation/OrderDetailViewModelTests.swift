@@ -7,6 +7,12 @@ import AlbertosCore
 
 final class OrderDetailViewModelTests: XCTestCase {
 
+    func test_headerText() {
+        let viewModel = OrderDetail.ViewModel(orderController: OrderController())
+
+        XCTAssertEqual(viewModel.headerText, "Your Order")
+    }
+    
     func test_whenOrderIsEmpty_ShouldNotShowTotalAmount() {
         let viewModel = OrderDetail.ViewModel(orderController: OrderController())
         

@@ -7,7 +7,7 @@ struct OrderDetail: View {
     let viewModel: ViewModel
 
     var body: some View {
-        Text(viewModel.text)
+        Text(viewModel.headerText)
     }
 }
 
@@ -15,7 +15,7 @@ import AlbertosCore
 
 extension OrderDetail {
     struct ViewModel {
-        let text = "Order Detail"
+        let headerText = "Your Order"
         let menuListItems: [MenuItem]
         let totalText: String?
         
