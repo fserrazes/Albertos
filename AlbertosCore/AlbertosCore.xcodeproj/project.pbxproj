@@ -50,7 +50,7 @@
 		0D25FFE728FD994C001B7682 /* NetworkFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetching.swift; sourceTree = "<group>"; };
 		0D25FFE928FD9993001B7682 /* URLSession+NetworkFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkFetching.swift"; sourceTree = "<group>"; };
 		0D4AF23628FD9AA300605367 /* NetworkFetchingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchingStub.swift; sourceTree = "<group>"; };
-		0D4AF24328FDA51400605367 /* OrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
+		0D4AF24328FDA51400605367 /* OrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderTests.swift; path = ../../Order/Feature/OrderTests.swift; sourceTree = "<group>"; };
 		0D4AF25728FDAC3700605367 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Order.swift; path = Order/Feature/Order.swift; sourceTree = "<group>"; };
 		0D4AF25928FDAC6600605367 /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderController.swift; path = Order/Domain/OrderController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
