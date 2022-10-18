@@ -6,6 +6,7 @@ import AlbertosCore
 
 @main
 struct AlbertosApp: App {
+    let orderController = OrderController()
     
     var body: some Scene {
         WindowGroup {
@@ -13,6 +14,7 @@ struct AlbertosApp: App {
                 MenuList(viewModel: .init(menuFetching: MenuFetcher()))
                     .navigationTitle("Alberto's 🇮🇹")
             }
+            .environmentObject(orderController)
         }
     }
 }

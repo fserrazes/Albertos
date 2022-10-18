@@ -7,6 +7,7 @@ import Combine
 
 struct MenuList: View {
     @ObservedObject var viewModel: ViewModel
+    @EnvironmentObject var orderController: OrderController
     
     var body: some View {
         switch viewModel.sections {
@@ -15,7 +16,9 @@ struct MenuList: View {
                     ForEach(sections) { section in
                         Section(header: Text(section.category)) {
                             ForEach(section.items) { item in
-                                MenuRow(viewModel: .init(item: item))
+                                NavigationLink(destination: destination(for: item)) {
+                                    MenuRow(viewModel: .init(item: item))
+                                }
                             }
                         }
                     }
@@ -26,6 +29,10 @@ struct MenuList: View {
                 Text(error.localizedDescription)
                     .italic()
         }
+    }
+    
+    func destination(for item: MenuItem) -> MenuItemDetail {
+        return MenuItemDetail(viewModel: .init(item: item, orderController: orderController))
     }
 }
 
