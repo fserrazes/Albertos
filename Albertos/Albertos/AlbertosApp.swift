@@ -10,9 +10,13 @@ struct AlbertosApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                MenuList(viewModel: .init(menuFetching: MenuFetcher()))
-                    .navigationTitle("Alberto's 🇮🇹")
+            ZStack(alignment: .bottom) {
+                NavigationStack {
+                    MenuList(viewModel: .init(menuFetching: MenuFetcher()))
+                        .navigationTitle("Alberto's 🇮🇹")
+                }
+                OrderButton(viewModel: .init())
+                    .padding(10)
             }
             .environmentObject(orderController)
         }

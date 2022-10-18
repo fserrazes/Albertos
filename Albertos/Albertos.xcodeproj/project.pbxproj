@@ -27,6 +27,8 @@
 		0D4AF26428FE9ACC00605367 /* MenuItemDetail+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF26328FE9ACC00605367 /* MenuItemDetail+ViewModel.swift */; };
 		0D4AF26728FE9C6200605367 /* MenuRow+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF26628FE9C6200605367 /* MenuRow+ViewModel.swift */; };
 		0D4AF26928FE9C9200605367 /* MenuList+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF26828FE9C9200605367 /* MenuList+ViewModel.swift */; };
+		0D4AF27328FEA9CD00605367 /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF27228FEA9CD00605367 /* OrderButton.swift */; };
+		0D4AF27728FEB25300605367 /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF27628FEB25300605367 /* OrderDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		0D4AF26328FE9ACC00605367 /* MenuItemDetail+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuItemDetail+ViewModel.swift"; sourceTree = "<group>"; };
 		0D4AF26628FE9C6200605367 /* MenuRow+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuRow+ViewModel.swift"; sourceTree = "<group>"; };
 		0D4AF26828FE9C9200605367 /* MenuList+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuList+ViewModel.swift"; sourceTree = "<group>"; };
+		0D4AF27228FEA9CD00605367 /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
+		0D4AF27628FEB25300605367 /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 				0D25FF8A28F998C4001B7682 /* AlbertosApp.swift */,
 				0D25FFB928F999F7001B7682 /* Menu */,
 				0D4AF25B28FDACB500605367 /* Menu Item Detail */,
+				0D4AF27028FEA9AF00605367 /* Order */,
+				0D4AF27428FEB22900605367 /* Order Detail */,
 				0D25FF8E28F998C6001B7682 /* Assets.xcassets */,
 				0D25FF9028F998C6001B7682 /* Preview Content */,
 			);
@@ -283,6 +289,38 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		0D4AF27028FEA9AF00605367 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				0D4AF27128FEA9BF00605367 /* View */,
+			);
+			name = Order;
+			sourceTree = "<group>";
+		};
+		0D4AF27128FEA9BF00605367 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D4AF27228FEA9CD00605367 /* OrderButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0D4AF27428FEB22900605367 /* Order Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0D4AF27528FEB24000605367 /* View */,
+			);
+			name = "Order Detail";
+			sourceTree = "<group>";
+		};
+		0D4AF27528FEB24000605367 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D4AF27628FEB25300605367 /* OrderDetail.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -415,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D4AF26428FE9ACC00605367 /* MenuItemDetail+ViewModel.swift in Sources */,
+				0D4AF27728FEB25300605367 /* OrderDetail.swift in Sources */,
 				0D4AF25E28FDACE200605367 /* MenuItemDetail.swift in Sources */,
 				0D4AF23928FD9DDE00605367 /* DataModel.swift in Sources */,
 				0D25FFC128F9B0BB001B7682 /* MenuRow.swift in Sources */,
@@ -422,6 +461,7 @@
 				0D25FFD028FA0713001B7682 /* MenuFetchingPlaceholder.swift in Sources */,
 				0D4AF26728FE9C6200605367 /* MenuRow+ViewModel.swift in Sources */,
 				0D25FF8B28F998C4001B7682 /* AlbertosApp.swift in Sources */,
+				0D4AF27328FEA9CD00605367 /* OrderButton.swift in Sources */,
 				0D4AF26928FE9C9200605367 /* MenuList+ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
