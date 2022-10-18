@@ -25,6 +25,8 @@
 		0D4AF25428FDAA0300605367 /* MenuItemDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF25328FDAA0300605367 /* MenuItemDetailViewModelTests.swift */; };
 		0D4AF25E28FDACE200605367 /* MenuItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF25D28FDACE200605367 /* MenuItemDetail.swift */; };
 		0D4AF26428FE9ACC00605367 /* MenuItemDetail+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF26328FE9ACC00605367 /* MenuItemDetail+ViewModel.swift */; };
+		0D4AF26728FE9C6200605367 /* MenuRow+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF26628FE9C6200605367 /* MenuRow+ViewModel.swift */; };
+		0D4AF26928FE9C9200605367 /* MenuList+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF26828FE9C9200605367 /* MenuList+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		0D4AF25328FDAA0300605367 /* MenuItemDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewModelTests.swift; sourceTree = "<group>"; };
 		0D4AF25D28FDACE200605367 /* MenuItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.swift; sourceTree = "<group>"; };
 		0D4AF26328FE9ACC00605367 /* MenuItemDetail+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuItemDetail+ViewModel.swift"; sourceTree = "<group>"; };
+		0D4AF26628FE9C6200605367 /* MenuRow+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuRow+ViewModel.swift"; sourceTree = "<group>"; };
+		0D4AF26828FE9C9200605367 /* MenuList+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuList+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				0D25FFBA28F99A03001B7682 /* View */,
+				0D4AF26528FE9C2E00605367 /* Presentation */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -265,6 +270,15 @@
 			isa = PBXGroup;
 			children = (
 				0D4AF26328FE9ACC00605367 /* MenuItemDetail+ViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0D4AF26528FE9C2E00605367 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0D4AF26628FE9C6200605367 /* MenuRow+ViewModel.swift */,
+				0D4AF26828FE9C9200605367 /* MenuList+ViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -406,7 +420,9 @@
 				0D25FFC128F9B0BB001B7682 /* MenuRow.swift in Sources */,
 				0D25FFBC28F99A36001B7682 /* MenuList.swift in Sources */,
 				0D25FFD028FA0713001B7682 /* MenuFetchingPlaceholder.swift in Sources */,
+				0D4AF26728FE9C6200605367 /* MenuRow+ViewModel.swift in Sources */,
 				0D25FF8B28F998C4001B7682 /* AlbertosApp.swift in Sources */,
+				0D4AF26928FE9C9200605367 /* MenuList+ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

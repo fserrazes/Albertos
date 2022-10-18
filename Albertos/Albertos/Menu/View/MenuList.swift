@@ -3,7 +3,6 @@
 
 import SwiftUI
 import AlbertosCore
-import Combine
 
 struct MenuList: View {
     @ObservedObject var viewModel: ViewModel
@@ -36,32 +35,9 @@ struct MenuList: View {
     }
 }
 
-extension MenuList {
-    class ViewModel: ObservableObject {
-        @Published private (set) var sections: Result<[MenuSection], Error> = .success([])
-
-        private  var cancellables = Set<AnyCancellable>()
-        
-        init(menuFetching: MenuFetching,
-             menuGrouping: @escaping ([MenuItem]) -> [MenuSection] = groupMenuByCategory) {
-            menuFetching
-                .fetchMenu()
-                .map(menuGrouping)
-                .sink( receiveCompletion: { [weak self] completion in
-                    guard case .failure(let error) = completion else { return }
-                    self?.sections = .failure(error)
-                },
-                receiveValue: { [weak self] value in
-                    self?.sections = .success(value)
-                })
-                .store(in: &cancellables)
-
-        }
-    }
-}
-
 struct MenuList_Previews: PreviewProvider {
     static var previews: some View {
         MenuList(viewModel: .init(menuFetching: MenuFetchingPlaceholder()))
+            .environmentObject(OrderController())
     }
 }
