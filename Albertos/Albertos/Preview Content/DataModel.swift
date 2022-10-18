@@ -16,3 +16,4 @@ public let menu = [
 ]
 
 public let previewOrderController = OrderController()
+public let previewPaymentProcessor = PaymentProcessingProxy()

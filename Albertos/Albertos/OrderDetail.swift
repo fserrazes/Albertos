@@ -44,6 +44,6 @@ struct OrderDetail: View {
 
 struct OrderDetail_Previews: PreviewProvider {
     static var previews: some View {
-        OrderDetail(viewModel: .init(orderController: previewOrderController))
+        OrderDetail(viewModel: .init(orderController: previewOrderController, paymentProcessor: previewPaymentProcessor))
     }
 }
