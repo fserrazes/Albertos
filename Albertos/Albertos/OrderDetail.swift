@@ -7,7 +7,24 @@ struct OrderDetail: View {
     let viewModel: ViewModel
 
     var body: some View {
-        Text(viewModel.headerText)
+        VStack(alignment: .center, spacing: 8) {
+            Text(viewModel.headerText)
+                .font(.title)
+                .padding(.top)
+            
+            if viewModel.menuListItems.isEmpty {
+                Text(viewModel.emptyMenuFallbackText)
+                    .multilineTextAlignment(.center)
+            } else {
+                List(viewModel.menuListItems) { Text($0.name) }
+            }
+            
+            if let total = viewModel.totalText {
+                Text(total)
+            }
+            
+            Spacer()
+        }
     }
 }
 
@@ -16,6 +33,7 @@ import AlbertosCore
 extension OrderDetail {
     struct ViewModel {
         let headerText = "Your Order"
+        let emptyMenuFallbackText = "Add dishes to the order to see them here!"
         let menuListItems: [MenuItem]
         let totalText: String?
         
