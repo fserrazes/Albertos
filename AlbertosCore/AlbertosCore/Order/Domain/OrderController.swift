@@ -13,7 +13,7 @@ public class OrderController: ObservableObject {
         self.order = order
     }
     
-    func isItemInOrder(_ item: MenuItem) -> Bool {
+    public func isItemInOrder(_ item: MenuItem) -> Bool {
         return false
     }
     

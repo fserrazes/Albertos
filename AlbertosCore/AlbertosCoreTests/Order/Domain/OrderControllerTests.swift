@@ -11,5 +11,11 @@ final class OrderControllerTests: XCTestCase {
         XCTAssertTrue(controller.order.items.isEmpty)
     }
     
+    func test_whenItemNotInOrder_returnsFalse() {
+        let controller = OrderController()
+        controller.addToOrder(item: .fixture(name: "a name"))
 
+        XCTAssertFalse(controller.isItemInOrder(.fixture(name: "another name")))
+    }
+    
 }
