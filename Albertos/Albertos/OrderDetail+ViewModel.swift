@@ -42,10 +42,11 @@ extension OrderDetail {
                 .sink(receiveCompletion: { [weak self] completion in
                     guard case .failure = completion else { return }
                     
-                    self?.alertToShow = Alert.ViewModel(title: "",
-                                                        message: "There's been an error with your order. Please contact a waiter.",
-                                                        buttonText: "Ok")
-                }, receiveValue: { _ in
+                    let message = "There's been an error with your order. Please contact a waiter."
+                    self?.alertToShow = Alert.ViewModel(title: "", message: message, buttonText: "Ok")
+                }, receiveValue: { [weak self] _ in
+                    let message = "The payment was successful. Your food will be with you shortly."
+                    self?.alertToShow = Alert.ViewModel(title: "", message: message, buttonText: "Ok")
                 })
                 .store(in: &cancellables)
 
