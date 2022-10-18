@@ -93,10 +93,6 @@ final class MenuListViewModelTests: XCTestCase {
     }
 }
 
-var anyNSError: NSError {
-    NSError(domain: "any error", code: 0)
-}
-
 extension MenuSection: Equatable {
     public static func == (lhs: AlbertosCore.MenuSection, rhs: AlbertosCore.MenuSection) -> Bool {
         return lhs.id == rhs.id
