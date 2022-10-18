@@ -2,5 +2,5 @@
 //  Copyright © 2022 Flavio Serrazes. All rights reserved.
 
 extension Order {
-    var hippoPaymentsPayload: [String: Any] { [:] }
+    public var hippoPaymentsPayload: [String: Any] { ["items": items.map { $0.name }] }
 }
