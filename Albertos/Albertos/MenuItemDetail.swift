@@ -6,15 +6,39 @@ import Combine
 import AlbertosCore
 
 struct MenuItemDetail: View {
+    @ObservedObject private(set) var viewModel: ViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 8) {
+            Text(viewModel.name)
+                .fontWeight(.bold)
+
+            if let spicy = viewModel.spicy {
+                Text(spicy)
+                    .font(Font.body.italic())
+            }
+
+            Text(viewModel.price)
+
+            Button(viewModel.addOrRemoveFromOrderButtonText) {
+                viewModel.addOrRemoveFromOrder()
+            }
+
+            Spacer()
+        }
+        .padding(8)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
 }
 
 extension MenuItemDetail {
-    class ViewModel {
+    class ViewModel: ObservableObject {
         private let item: MenuItem
         private let orderController: OrderController
+        
+        let name: String
+        let spicy: String?
+        let price: String
         
         // TODO: Using default value for OrderController while working on the ViewModel implementation.
         // We'll remove it once done and inject it from the view.
@@ -25,6 +49,10 @@ extension MenuItemDetail {
         init(item: MenuItem, orderController: OrderController = OrderController()) {
             self.item = item
             self.orderController = orderController
+            
+            name = item.name
+            spicy = item.spicy ? "Spicy" : .none
+            price = "$\(String(format: "%.2f", item.price))"
             
             self.orderController.$order
                 .sink { [weak self] order in
@@ -51,6 +79,7 @@ extension MenuItemDetail {
 
 struct MenuItemDetail_Previews: PreviewProvider {
     static var previews: some View {
-        MenuItemDetail()
+        let item = MenuItem(category: "some category", name: "any name", spicy: true, price: 0.99)
+        MenuItemDetail(viewModel: .init(item: item))
     }
 }
