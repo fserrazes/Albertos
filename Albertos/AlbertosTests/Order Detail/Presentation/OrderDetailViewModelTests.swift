@@ -29,7 +29,13 @@ final class OrderDetailViewModelTests: XCTestCase {
     }
 
     func test_whenOrderIsNonEmpty_MenuListItemIsOrderItems() {
-        
-    }
+        let orderController = OrderController()
+        orderController.addToOrder(item: .fixture(name: "a name"))
+        orderController.addToOrder(item: .fixture(name: "another name"))
+        let viewModel = OrderDetail.ViewModel(orderController: orderController)
 
+        XCTAssertEqual(viewModel.menuListItems.count, 2)
+        XCTAssertEqual(viewModel.menuListItems.first?.name, "a name")
+        XCTAssertEqual(viewModel.menuListItems.last?.name, "another name")
+    }
 }
