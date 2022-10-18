@@ -9,13 +9,13 @@ import AlbertosCore
 final class OrderDetailViewModelTests: XCTestCase {
 
     func test_headerText() {
-        let viewModel = OrderDetail.ViewModel(orderController: OrderController())
+        let viewModel = OrderDetail.ViewModel(orderController: OrderController(), paymentProcessor: PaymentProcessingSpy())
 
         XCTAssertEqual(viewModel.headerText, "Your Order")
     }
     
     func test_whenOrderIsEmpty_ShouldNotShowTotalAmount() {
-        let viewModel = OrderDetail.ViewModel(orderController: OrderController())
+        let viewModel = OrderDetail.ViewModel(orderController: OrderController(), paymentProcessor: PaymentProcessingSpy())
         
         XCTAssertNil(viewModel.totalText)
     }
@@ -24,13 +24,13 @@ final class OrderDetailViewModelTests: XCTestCase {
         let orderController = OrderController()
         orderController.addToOrder(item: .fixture(price: 1.0))
         orderController.addToOrder(item: .fixture(price: 2.3))
-        let viewModel = OrderDetail.ViewModel(orderController: orderController)
+        let viewModel = OrderDetail.ViewModel(orderController: orderController, paymentProcessor: PaymentProcessingSpy())
 
         XCTAssertEqual(viewModel.totalText, "Total: $3.30")
     }
 
     func test_whenOrderIsEmpty_HasNotItemNamesToShow() {
-        let viewModel = OrderDetail.ViewModel(orderController: OrderController())
+        let viewModel = OrderDetail.ViewModel(orderController: OrderController(), paymentProcessor: PaymentProcessingSpy())
 
         XCTAssertEqual(viewModel.menuListItems.count, 0)
     }
@@ -39,7 +39,7 @@ final class OrderDetailViewModelTests: XCTestCase {
         let orderController = OrderController()
         orderController.addToOrder(item: .fixture(name: "a name"))
         orderController.addToOrder(item: .fixture(name: "another name"))
-        let viewModel = OrderDetail.ViewModel(orderController: orderController)
+        let viewModel = OrderDetail.ViewModel(orderController: orderController, paymentProcessor: PaymentProcessingSpy())
 
         XCTAssertEqual(viewModel.menuListItems.count, 2)
         XCTAssertEqual(viewModel.menuListItems.first?.name, "a name")

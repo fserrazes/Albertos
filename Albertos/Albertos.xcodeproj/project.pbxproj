@@ -37,6 +37,8 @@
 		0DC7C51528FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51428FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift */; };
 		0DC7C51A28FF16B70072C5DB /* OrderButton+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51928FF16B70072C5DB /* OrderButton+ViewModel.swift */; };
 		0DC7C51C28FF1B060072C5DB /* PaymentProcessingProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51B28FF1B060072C5DB /* PaymentProcessingProxy.swift */; };
+		0DC7C51E28FF1DFB0072C5DB /* HippoPayments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC7C51D28FF1DFB0072C5DB /* HippoPayments.framework */; };
+		0DC7C51F28FF1DFB0072C5DB /* HippoPayments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC7C51D28FF1DFB0072C5DB /* HippoPayments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0DC7C51F28FF1DFB0072C5DB /* HippoPayments.framework in Embed Frameworks */,
 				0D25FFB728F9998E001B7682 /* AlbertosCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -103,6 +106,7 @@
 		0DC7C51428FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HippoPaymentsProcessor+PaymentProcessing.swift"; sourceTree = "<group>"; };
 		0DC7C51928FF16B70072C5DB /* OrderButton+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderButton+ViewModel.swift"; sourceTree = "<group>"; };
 		0DC7C51B28FF1B060072C5DB /* PaymentProcessingProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProcessingProxy.swift; sourceTree = "<group>"; };
+		0DC7C51D28FF1DFB0072C5DB /* HippoPayments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HippoPayments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DC7C51E28FF1DFB0072C5DB /* HippoPayments.framework in Frameworks */,
 				0D25FFB628F9998E001B7682 /* AlbertosCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +206,7 @@
 		0D25FFB428F9998E001B7682 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0DC7C51D28FF1DFB0072C5DB /* HippoPayments.framework */,
 				0D25FFB528F9998E001B7682 /* AlbertosCore.framework */,
 			);
 			name = Frameworks;

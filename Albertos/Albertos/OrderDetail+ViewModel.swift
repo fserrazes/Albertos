@@ -7,7 +7,7 @@ import HippoPayments
 extension OrderDetail {
     struct ViewModel {
         let headerText = "Your Order"
-        let emptyMenuFallbackText = "Add dishes to the order to see them here!"
+        let emptyMenuFallbackText = "Add dishes to the order to see them here"
         let menuListItems: [MenuItem]
         let totalText: String?
         
@@ -17,10 +17,7 @@ extension OrderDetail {
         private let orderController: OrderController
         private let paymentProcessor: PaymentProcessing
         
-        // TODO: Using a default value for HippoPaymentsProcessor // only to make the code compile.
-        // We'll remove it once fully integrated.
-        
-        init(orderController: OrderController, paymentProcessor: PaymentProcessing = HippoPaymentsProcessor.init(apiKey: "A1B2C3")) {
+        init(orderController: OrderController, paymentProcessor: PaymentProcessing) {
             self.orderController = orderController
             self.paymentProcessor = paymentProcessor
             

@@ -6,6 +6,8 @@ import AlbertosCore
 
 struct OrderButton: View {
     @EnvironmentObject var orderController: OrderController
+    @EnvironmentObject var paymentProcessor: PaymentProcessingProxy
+    
     @State private(set) var showingDetail: Bool = false
     
     let viewModel: ViewModel
@@ -22,7 +24,7 @@ struct OrderButton: View {
                 .cornerRadius(10.0)
         }
         .sheet(isPresented: $showingDetail) {
-            OrderDetail(viewModel: .init(orderController: orderController))
+            OrderDetail(viewModel: .init(orderController: orderController, paymentProcessor: paymentProcessor))
         }
     }
 }
@@ -31,5 +33,6 @@ struct OrderButton_Previews: PreviewProvider {
     static var previews: some View {
         OrderButton(viewModel: .init(orderController: OrderController()))
             .environmentObject(OrderController())
+            .environmentObject(PaymentProcessingProxy())
     }
 }
