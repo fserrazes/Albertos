@@ -10,6 +10,8 @@
 		0DC7C50428FEF1690072C5DB /* HippoPayments.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DC7C50328FEF1690072C5DB /* HippoPayments.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DC7C50B28FEF1D60072C5DB /* HippoPaymentsProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C50A28FEF1D60072C5DB /* HippoPaymentsProcessor.swift */; };
 		0DC7C50D28FEF2780072C5DB /* HippoPaymentsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C50C28FEF2780072C5DB /* HippoPaymentsError.swift */; };
+		0DC7C52128FF244B0072C5DB /* HippoPaymentsConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C52028FF244B0072C5DB /* HippoPaymentsConfirmationViewController.swift */; };
+		0DC7C52428FF247D0072C5DB /* UIViewController+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C52328FF247D0072C5DB /* UIViewController+Presentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,8 @@
 		0DC7C50328FEF1690072C5DB /* HippoPayments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HippoPayments.h; sourceTree = "<group>"; };
 		0DC7C50A28FEF1D60072C5DB /* HippoPaymentsProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HippoPaymentsProcessor.swift; sourceTree = "<group>"; };
 		0DC7C50C28FEF2780072C5DB /* HippoPaymentsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HippoPaymentsError.swift; sourceTree = "<group>"; };
+		0DC7C52028FF244B0072C5DB /* HippoPaymentsConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HippoPaymentsConfirmationViewController.swift; sourceTree = "<group>"; };
+		0DC7C52328FF247D0072C5DB /* UIViewController+Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Presentation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,11 +53,21 @@
 		0DC7C50228FEF1690072C5DB /* HippoPayments */ = {
 			isa = PBXGroup;
 			children = (
+				0DC7C52228FF24700072C5DB /* Helper */,
 				0DC7C50328FEF1690072C5DB /* HippoPayments.h */,
 				0DC7C50C28FEF2780072C5DB /* HippoPaymentsError.swift */,
 				0DC7C50A28FEF1D60072C5DB /* HippoPaymentsProcessor.swift */,
+				0DC7C52028FF244B0072C5DB /* HippoPaymentsConfirmationViewController.swift */,
 			);
 			path = HippoPayments;
+			sourceTree = "<group>";
+		};
+		0DC7C52228FF24700072C5DB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0DC7C52328FF247D0072C5DB /* UIViewController+Presentation.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +152,8 @@
 			files = (
 				0DC7C50D28FEF2780072C5DB /* HippoPaymentsError.swift in Sources */,
 				0DC7C50B28FEF1D60072C5DB /* HippoPaymentsProcessor.swift in Sources */,
+				0DC7C52428FF247D0072C5DB /* UIViewController+Presentation.swift in Sources */,
+				0DC7C52128FF244B0072C5DB /* HippoPaymentsConfirmationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
