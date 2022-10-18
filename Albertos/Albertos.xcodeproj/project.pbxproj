@@ -34,6 +34,7 @@
 		0D4AF28128FEBFAD00605367 /* OrderDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF28028FEBFAD00605367 /* OrderDetailViewModelTests.swift */; };
 		0DC7C51028FEF5400072C5DB /* OrderDetail+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C50F28FEF5400072C5DB /* OrderDetail+ViewModel.swift */; };
 		0DC7C51328FEF9B50072C5DB /* PaymentProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51228FEF9B40072C5DB /* PaymentProcessing.swift */; };
+		0DC7C51528FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51428FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		0D4AF28028FEBFAD00605367 /* OrderDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewModelTests.swift; sourceTree = "<group>"; };
 		0DC7C50F28FEF5400072C5DB /* OrderDetail+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderDetail+ViewModel.swift"; sourceTree = "<group>"; };
 		0DC7C51228FEF9B40072C5DB /* PaymentProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProcessing.swift; sourceTree = "<group>"; };
+		0DC7C51428FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HippoPaymentsProcessor+PaymentProcessing.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				0DC7C51228FEF9B40072C5DB /* PaymentProcessing.swift */,
+				0DC7C51428FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift */,
 			);
 			name = Payment;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DC7C51528FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift in Sources */,
 				0D4AF26428FE9ACC00605367 /* MenuItemDetail+ViewModel.swift in Sources */,
 				0D4AF27728FEB25300605367 /* OrderDetail.swift in Sources */,
 				0D4AF25E28FDACE200605367 /* MenuItemDetail.swift in Sources */,

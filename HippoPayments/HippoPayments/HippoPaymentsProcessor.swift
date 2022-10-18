@@ -9,7 +9,7 @@ public class HippoPaymentsProcessor {
         
     }
     
-    func processPayment(payload: [String : Any], onSuccess: @escaping () -> Void, onFailure: @escaping (HippoPaymentsError) -> Void) {
+    public func processPayment(payload: [String : Any], onSuccess: @escaping () -> Void, onFailure: @escaping (HippoPaymentsError) -> Void) {
         
     }
 }
