@@ -24,15 +24,20 @@ struct OrderButton: View {
     }
 }
 
+import AlbertosCore
 extension OrderButton {
-    struct ViewModel {
+    class ViewModel {
 
         let text = "Your Order"
+        
+        init(orderController: OrderController) {
+            
+        }
     }
 }
 
 struct OrderButton_Previews: PreviewProvider {
     static var previews: some View {
-        OrderButton(viewModel: .init())
+        OrderButton(viewModel: .init(orderController: OrderController()))
     }
 }

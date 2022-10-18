@@ -15,7 +15,7 @@ struct AlbertosApp: App {
                     MenuList(viewModel: .init(menuFetching: MenuFetcher()))
                         .navigationTitle("Alberto's 🇮🇹")
                 }
-                OrderButton(viewModel: .init())
+                OrderButton(viewModel: .init(orderController: orderController))
                     .padding(10)
             }
             .environmentObject(orderController)
