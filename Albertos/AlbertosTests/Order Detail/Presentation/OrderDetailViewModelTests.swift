@@ -67,6 +67,28 @@ final class OrderDetailViewModelTests: XCTestCase {
         XCTAssertEqual(paymentProcessingSpy.receivedOrder,orderController.order)
     }
     
+    func test_whenPaymentSucceeds_UpdatesPropertyToShowConfirmationAlert() {
+        
+    }
+    
+    func test_whenPaymentFails_UpdatesPropertyToShowErrorAlert() {
+        let paymentProcessingStub = PaymentProcessingStub(returning: .failure(anyNSError))
+        let viewModel = OrderDetail.ViewModel(orderController: OrderController(), paymentProcessor: paymentProcessingStub)
+        
+        // Use XCTNSPredicateExpectation because we cannot explicitly fulfill an expectation once the async code under test has no callback
+        let predicate = NSPredicate { _, _ in viewModel.alertToShow != nil }
+        let expectation = XCTNSPredicateExpectation(predicate: predicate, object: .none)
+        
+        viewModel.checkout()
+        
+        wait(for: [expectation], timeout: 2)
+        
+        XCTAssertEqual(viewModel.alertToShow?.title, "")
+        XCTAssertEqual(viewModel.alertToShow?.message, "There's been an error with your order. Please contact a waiter.")
+        XCTAssertEqual(viewModel.alertToShow?.buttonText, "Ok")
+    }
+    
+    
     // MARK: - Helpers
     
     private class PaymentProcessingSpy: PaymentProcessing {
@@ -75,6 +97,21 @@ final class OrderDetailViewModelTests: XCTestCase {
         func process(order: Order) -> AnyPublisher<Void, Error> {
             receivedOrder = order
             return Result<Void, Error>.success(()).publisher.eraseToAnyPublisher()
+        }
+    }
+    
+    private class PaymentProcessingStub: PaymentProcessing {
+        let result: Result<Void, Error>
+        
+        init(returning result: Result<Void, Error>) {
+            self.result = result
+        }
+        
+        func process(order: Order) -> AnyPublisher<Void, Error> {
+            return result.publisher
+            // Use a delay to simulate the real world async // behavior
+            .delay(for: 0.01, scheduler: RunLoop.main)
+            .eraseToAnyPublisher()
         }
     }
 }
