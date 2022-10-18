@@ -24,6 +24,7 @@
 		0D4AF25A28FDAC6600605367 /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF25928FDAC6600605367 /* OrderController.swift */; };
 		0D4AF26C28FEA00F00605367 /* OrderControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF26B28FEA00F00605367 /* OrderControllerTests.swift */; };
 		0D4AF26F28FEA10900605367 /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF26E28FEA10900605367 /* OrderTests.swift */; };
+		0DC7C51728FEFCC30072C5DB /* Order+HippoPayments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51628FEFCC30072C5DB /* Order+HippoPayments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		0D4AF25928FDAC6600605367 /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderController.swift; path = Order/Domain/OrderController.swift; sourceTree = "<group>"; };
 		0D4AF26B28FEA00F00605367 /* OrderControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderControllerTests.swift; path = AlbertosCoreTests/Order/Domain/OrderControllerTests.swift; sourceTree = SOURCE_ROOT; };
 		0D4AF26E28FEA10900605367 /* OrderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
+		0DC7C51628FEFCC30072C5DB /* Order+HippoPayments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+HippoPayments.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				0D4AF25728FDAC3700605367 /* Order.swift */,
+				0DC7C51628FEFCC30072C5DB /* Order+HippoPayments.swift */,
 			);
 			name = Feature;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D4AF25A28FDAC6600605367 /* OrderController.swift in Sources */,
+				0DC7C51728FEFCC30072C5DB /* Order+HippoPayments.swift in Sources */,
 				0D25FF2E28F97921001B7682 /* MenuSection.swift in Sources */,
 				0D25FFE828FD994C001B7682 /* NetworkFetching.swift in Sources */,
 				0D4AF25828FDAC3700605367 /* Order.swift in Sources */,

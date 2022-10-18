@@ -12,16 +12,14 @@ extension OrderDetail {
         let totalText: String?
         
         private let orderController: OrderController
-        private let paymentProcessor: HippoPaymentsProcessor
+        private let paymentProcessor: PaymentProcessing
         
         // TODO: Using a default value for HippoPaymentsProcessor // only to make the code compile.
         // We'll remove it once fully integrated.
         
-        init(orderController: OrderController, paymentProcessor: HippoPaymentsProcessor = .init(apiKey: "A1B2C3")) {
+        init(orderController: OrderController, paymentProcessor: PaymentProcessing = HippoPaymentsProcessor.init(apiKey: "A1B2C3")) {
             self.orderController = orderController
             self.paymentProcessor = paymentProcessor
-            
-            
             
             self.totalText = orderController.order.items.isEmpty ?
                 .none : "Total: $\(String(format: "%.2f", orderController.order.total))"
