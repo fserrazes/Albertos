@@ -35,4 +35,18 @@ final class OrderControllerTests: XCTestCase {
         XCTAssertEqual(controller.order.items.count, 1)
         XCTAssertEqual(controller.order.items.first, item)
     }
+    
+    func test_removeItem_updatesOrder() {
+        let item = MenuItem.fixture(name: "a name")
+        let otherItem = MenuItem.fixture(name: "another name")
+        
+        let controller = OrderController()
+        controller.addToOrder(item: item)
+        controller.addToOrder(item: otherItem)
+
+        controller.removeFromOrder(item: item)
+
+        XCTAssertEqual(controller.order.items.count, 1)
+        XCTAssertEqual(controller.order.items.first, otherItem)
+    }
 }
