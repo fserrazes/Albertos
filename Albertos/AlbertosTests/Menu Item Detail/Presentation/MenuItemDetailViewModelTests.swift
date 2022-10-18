@@ -67,5 +67,20 @@ final class MenuItemDetailViewModelTests: XCTestCase {
                                    orderController: OrderController()).spicy)
     }
 
-    
+    func test_priceIsFormatted_itemPrice() {
+        XCTAssertEqual(
+            MenuItemDetail.ViewModel(item: .fixture(price: 1.0),
+                          orderController: OrderController()).price, "$1.00")
+        XCTAssertEqual(
+            MenuItemDetail.ViewModel(item: .fixture(price: 2.5),
+                          orderController: OrderController()).price, "$2.50")
+        
+        XCTAssertEqual(
+            MenuItemDetail.ViewModel(item: .fixture(price: 3.45),
+                          orderController: OrderController()).price, "$3.45")
+        
+        XCTAssertEqual(
+            MenuItemDetail.ViewModel(item: .fixture(price: 4.123),
+                          orderController: OrderController()).price, "$4.12")
+    }
 }
