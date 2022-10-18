@@ -41,6 +41,7 @@
 		0DC7C51F28FF1DFB0072C5DB /* HippoPayments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC7C51D28FF1DFB0072C5DB /* HippoPayments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DC7C53A28FF307A0072C5DB /* HippoAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC7C53928FF307A0072C5DB /* HippoAnalytics.framework */; };
 		0DC7C53B28FF307A0072C5DB /* HippoAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC7C53928FF307A0072C5DB /* HippoAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0DC7C54028FF379C0072C5DB /* Alert+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C53F28FF379C0072C5DB /* Alert+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		0DC7C51B28FF1B060072C5DB /* PaymentProcessingProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProcessingProxy.swift; sourceTree = "<group>"; };
 		0DC7C51D28FF1DFB0072C5DB /* HippoPayments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HippoPayments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC7C53928FF307A0072C5DB /* HippoAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HippoAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DC7C53F28FF379C0072C5DB /* Alert+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +392,7 @@
 		0DC7C50E28FEF5240072C5DB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0DC7C53E28FF37290072C5DB /* Helper */,
 				0DC7C50F28FEF5400072C5DB /* OrderDetail+ViewModel.swift */,
 			);
 			name = Presentation;
@@ -411,6 +414,14 @@
 				0DC7C51928FF16B70072C5DB /* OrderButton+ViewModel.swift */,
 			);
 			name = Presentation;
+			sourceTree = "<group>";
+		};
+		0DC7C53E28FF37290072C5DB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0DC7C53F28FF379C0072C5DB /* Alert+ViewModel.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -548,6 +559,7 @@
 				0D4AF26428FE9ACC00605367 /* MenuItemDetail+ViewModel.swift in Sources */,
 				0D4AF27728FEB25300605367 /* OrderDetail.swift in Sources */,
 				0D4AF25E28FDACE200605367 /* MenuItemDetail.swift in Sources */,
+				0DC7C54028FF379C0072C5DB /* Alert+ViewModel.swift in Sources */,
 				0DC7C51C28FF1B060072C5DB /* PaymentProcessingProxy.swift in Sources */,
 				0D4AF23928FD9DDE00605367 /* DataModel.swift in Sources */,
 				0DC7C51A28FF16B70072C5DB /* OrderButton+ViewModel.swift in Sources */,
