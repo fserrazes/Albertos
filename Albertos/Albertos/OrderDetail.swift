@@ -28,26 +28,8 @@ struct OrderDetail: View {
     }
 }
 
-import AlbertosCore
-
-extension OrderDetail {
-    struct ViewModel {
-        let headerText = "Your Order"
-        let emptyMenuFallbackText = "Add dishes to the order to see them here!"
-        let menuListItems: [MenuItem]
-        let totalText: String?
-        
-        init(orderController: OrderController) {
-            self.totalText = orderController.order.items.isEmpty ?
-                .none : "Total: $\(String(format: "%.2f", orderController.order.total))"
-            
-            self.menuListItems = orderController.order.items
-        }
-    }
-}
-
 struct OrderDetail_Previews: PreviewProvider {
     static var previews: some View {
-        OrderDetail(viewModel: .init(orderController: OrderController()))
+        OrderDetail(viewModel: .init(orderController: previewOrderController))
     }
 }

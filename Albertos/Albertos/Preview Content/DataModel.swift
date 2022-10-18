@@ -14,3 +14,5 @@ public let menu = [
     MenuItem(category: "desserts", name: "Tiramisù", spicy: false, price: 5.43),
     MenuItem(category: "desserts", name: "Crema Catalana", spicy: false, price: 4.68),
 ]
+
+public let previewOrderController = OrderController()
