@@ -56,5 +56,16 @@ final class MenuItemDetailViewModelTests: XCTestCase {
                           orderController: OrderController()).name, "a name")
     }
 
+    func test_whenItemIsSpicy_ShowsSpicyMessage() {
+        XCTAssertEqual(
+            MenuItemDetail.ViewModel(item: .fixture(spicy: true),
+                          orderController: OrderController()).spicy, "Spicy")
+    }
+
+    func test_whenItemIsNotSpicy_DoesNotShowSpicyMessage() {
+        XCTAssertNil(MenuItemDetail.ViewModel(item: .fixture(spicy: false),
+                                   orderController: OrderController()).spicy)
+    }
+
     
 }
