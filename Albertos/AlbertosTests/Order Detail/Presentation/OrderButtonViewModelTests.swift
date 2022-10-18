@@ -8,19 +8,28 @@ import AlbertosCore
 final class OrderButtonViewModelTests: XCTestCase {
 
     func test_whenOrderIsEmpty_doesNotShowTotal() {
-        let orderController = OrderController()
-        let viewModel = OrderButton.ViewModel(orderController: orderController)
+        let (sut, _) = makeSUT()
 
-        XCTAssertEqual(viewModel.text, "Your Order")
+        XCTAssertEqual(sut.text, "Your Order")
     }
 
     func test_whenOrderIsNotEmpty_showsTotal() {
-        let orderController = OrderController()
-        orderController.addToOrder(item: .fixture(price: 1.0))
-        orderController.addToOrder(item: .fixture(price: 2.3))
+        let (sut, order) = makeSUT()
         
-        let viewModel = OrderButton.ViewModel(orderController: orderController)
-
-        XCTAssertEqual(viewModel.text, "Your Order $3.30")
+        order.addToOrder(item: .fixture(price: 1.0))
+        XCTAssertEqual(sut.text, "Your Order $1.00")
+        
+        order.addToOrder(item: .fixture(price: 2.3))
+        XCTAssertEqual(sut.text, "Your Order $3.30")
+        
+    }
+    
+    // MARK: - Helpers
+    
+    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (OrderButton.ViewModel, OrderController) {
+        let orderController = OrderController()
+        let sut = OrderButton.ViewModel(orderController: orderController)
+     
+        return (sut, orderController)
     }
 }
