@@ -11,6 +11,9 @@ extension OrderDetail {
         let menuListItems: [MenuItem]
         let totalText: String?
         
+        let shouldShowCheckoutButton: Bool
+        let checkoutButtonText = "Checkout"
+        
         private let orderController: OrderController
         private let paymentProcessor: PaymentProcessing
         
@@ -21,8 +24,13 @@ extension OrderDetail {
             self.orderController = orderController
             self.paymentProcessor = paymentProcessor
             
-            self.totalText = orderController.order.items.isEmpty ?
-                .none : "Total: $\(String(format: "%.2f", orderController.order.total))"
+            if orderController.order.items.isEmpty {
+                totalText = .none
+                shouldShowCheckoutButton = false
+            } else {
+                totalText = "Total: $\(String(format: "%.2f", orderController.order.total))"
+                shouldShowCheckoutButton = true
+            }
             
             self.menuListItems = orderController.order.items
         }
