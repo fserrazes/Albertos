@@ -24,7 +24,7 @@ struct OrderButton: View {
                 .cornerRadius(10.0)
         }
         .sheet(isPresented: $showingDetail) {
-            OrderDetail(viewModel: .init(orderController: orderController, paymentProcessor: paymentProcessor))
+            OrderDetail(viewModel: .init(orderController: orderController, paymentProcessor: paymentProcessor, onAlertDismiss: {}))
         }
     }
 }

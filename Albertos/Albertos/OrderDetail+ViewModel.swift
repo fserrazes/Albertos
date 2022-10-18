@@ -18,13 +18,15 @@ extension OrderDetail {
         let shouldShowCheckoutButton: Bool
         let checkoutButtonText = "Checkout"
         
+        private var cancellables = Set<AnyCancellable>()
         private let orderController: OrderController
         private let paymentProcessor: PaymentProcessing
-        private var cancellables = Set<AnyCancellable>()
+        private let onAlertDismiss: () -> Void
         
-        init(orderController: OrderController, paymentProcessor: PaymentProcessing) {
+        init(orderController: OrderController, paymentProcessor: PaymentProcessing, onAlertDismiss: @escaping () -> Void) {
             self.orderController = orderController
             self.paymentProcessor = paymentProcessor
+            self.onAlertDismiss = onAlertDismiss
             
             if orderController.order.items.isEmpty {
                 totalText = .none
@@ -43,10 +45,10 @@ extension OrderDetail {
                     guard case .failure = completion else { return }
                     
                     let message = "There's been an error with your order. Please contact a waiter."
-                    self?.alertToShow = Alert.ViewModel(title: "", message: message, buttonText: "Ok")
+                    self?.alertToShow = Alert.ViewModel(title: "", message: message, buttonText: "Ok", buttonAction: self?.onAlertDismiss)
                 }, receiveValue: { [weak self] _ in
                     let message = "The payment was successful. Your food will be with you shortly."
-                    self?.alertToShow = Alert.ViewModel(title: "", message: message, buttonText: "Ok")
+                    self?.alertToShow = Alert.ViewModel(title: "", message: message, buttonText: "Ok", buttonAction: self?.onAlertDismiss)
                 })
                 .store(in: &cancellables)
 
