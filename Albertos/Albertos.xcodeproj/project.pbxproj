@@ -36,6 +36,7 @@
 		0DC7C51328FEF9B50072C5DB /* PaymentProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51228FEF9B40072C5DB /* PaymentProcessing.swift */; };
 		0DC7C51528FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51428FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift */; };
 		0DC7C51A28FF16B70072C5DB /* OrderButton+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51928FF16B70072C5DB /* OrderButton+ViewModel.swift */; };
+		0DC7C51C28FF1B060072C5DB /* PaymentProcessingProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51B28FF1B060072C5DB /* PaymentProcessingProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		0DC7C51228FEF9B40072C5DB /* PaymentProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProcessing.swift; sourceTree = "<group>"; };
 		0DC7C51428FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HippoPaymentsProcessor+PaymentProcessing.swift"; sourceTree = "<group>"; };
 		0DC7C51928FF16B70072C5DB /* OrderButton+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderButton+ViewModel.swift"; sourceTree = "<group>"; };
+		0DC7C51B28FF1B060072C5DB /* PaymentProcessingProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProcessingProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				0DC7C51228FEF9B40072C5DB /* PaymentProcessing.swift */,
+				0DC7C51B28FF1B060072C5DB /* PaymentProcessingProxy.swift */,
 				0DC7C51428FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift */,
 			);
 			name = Payment;
@@ -533,6 +536,7 @@
 				0D4AF26428FE9ACC00605367 /* MenuItemDetail+ViewModel.swift in Sources */,
 				0D4AF27728FEB25300605367 /* OrderDetail.swift in Sources */,
 				0D4AF25E28FDACE200605367 /* MenuItemDetail.swift in Sources */,
+				0DC7C51C28FF1B060072C5DB /* PaymentProcessingProxy.swift in Sources */,
 				0D4AF23928FD9DDE00605367 /* DataModel.swift in Sources */,
 				0DC7C51A28FF16B70072C5DB /* OrderButton+ViewModel.swift in Sources */,
 				0DC7C51028FEF5400072C5DB /* OrderDetail+ViewModel.swift in Sources */,
