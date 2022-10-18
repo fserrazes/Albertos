@@ -49,5 +49,12 @@ final class MenuItemDetailViewModelTests: XCTestCase {
 
         XCTAssertTrue(orderController.order.items.contains { $0 == item })
     }
+    
+    func test_Name_IsItemName() {
+        XCTAssertEqual(
+            MenuItemDetail.ViewModel(item: .fixture(name: "a name"),
+                          orderController: OrderController()).name, "a name")
+    }
 
+    
 }
