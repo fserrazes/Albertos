@@ -14,7 +14,12 @@ final class OrderDetailViewModelTests: XCTestCase {
     }
 
     func test_whenOrderIsNonEmpty_ShouldShowTotalAmount() {
-        
+        let orderController = OrderController()
+        orderController.addToOrder(item: .fixture(price: 1.0))
+        orderController.addToOrder(item: .fixture(price: 2.3))
+        let viewModel = OrderDetail.ViewModel(orderController: orderController)
+
+        XCTAssertEqual(viewModel.totalText, "Total: $3.30")
     }
 
     func test_whenOrderIsEmpty_HasNotItemNamesToShow() {
