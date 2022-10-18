@@ -23,7 +23,9 @@ final class OrderDetailViewModelTests: XCTestCase {
     }
 
     func test_whenOrderIsEmpty_HasNotItemNamesToShow() {
-        
+        let viewModel = OrderDetail.ViewModel(orderController: OrderController())
+
+        XCTAssertEqual(viewModel.menuListItems.count, 0)
     }
 
     func test_whenOrderIsNonEmpty_MenuListItemIsOrderItems() {

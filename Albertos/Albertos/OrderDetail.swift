@@ -16,11 +16,14 @@ import AlbertosCore
 extension OrderDetail {
     struct ViewModel {
         let text = "Order Detail"
+        let menuListItems: [MenuItem]
         let totalText: String?
         
         init(orderController: OrderController) {
             self.totalText = orderController.order.items.isEmpty ?
                 .none : "Total: $\(String(format: "%.2f", orderController.order.total))"
+            
+            self.menuListItems = orderController.order.items
         }
     }
 }
