@@ -4,7 +4,9 @@
 import SwiftUI
 
 struct OrderButton: View {
+    @EnvironmentObject var orderController: OrderController
     @State private(set) var showingDetail: Bool = false
+    
     let viewModel: ViewModel
     
     var body: some View {
@@ -19,7 +21,7 @@ struct OrderButton: View {
                 .cornerRadius(10.0)
         }
         .sheet(isPresented: $showingDetail) {
-            OrderDetail(viewModel: .init())
+            OrderDetail(viewModel: .init(orderController: orderController))
         }
     }
 }
@@ -46,5 +48,6 @@ extension OrderButton {
 struct OrderButton_Previews: PreviewProvider {
     static var previews: some View {
         OrderButton(viewModel: .init(orderController: OrderController()))
+            .environmentObject(OrderController())
     }
 }

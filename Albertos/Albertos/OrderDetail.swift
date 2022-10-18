@@ -11,14 +11,20 @@ struct OrderDetail: View {
     }
 }
 
+import AlbertosCore
 extension OrderDetail {
     struct ViewModel {
         let text = "Order Detail"
+        let totalText: String?
+        
+        init(orderController: OrderController) {
+            self.totalText = .none
+        }
     }
 }
 
 struct OrderDetail_Previews: PreviewProvider {
     static var previews: some View {
-        OrderDetail(viewModel: .init())
+        OrderDetail(viewModel: .init(orderController: OrderController()))
     }
 }
