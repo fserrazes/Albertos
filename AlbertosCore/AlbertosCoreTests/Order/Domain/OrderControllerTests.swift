@@ -5,6 +5,7 @@ import XCTest
 import AlbertosCore
 
 final class OrderControllerTests: XCTestCase {
+    
     func test_initsWithEmptyOrder() {
         let controller = OrderController()
 

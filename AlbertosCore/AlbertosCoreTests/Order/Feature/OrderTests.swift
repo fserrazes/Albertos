@@ -5,6 +5,7 @@ import XCTest
 import AlbertosCore
 
 class OrderTests: XCTestCase {
+    
     func test_totalSums_pricesOfEachItem() {
         let order = Order(
             items: [.fixture(price: 1.0), .fixture(price: 2.0), .fixture(price: 3.5)]
