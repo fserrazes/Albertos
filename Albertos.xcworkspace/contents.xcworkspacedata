@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Albertos/Albertos.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:AlbertosCore/AlbertosCore.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Albertos/Albertos.xcodeproj">
+      location = "group:HippoPayments/HippoPayments.xcodeproj">
    </FileRef>
 </Workspace>
