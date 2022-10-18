@@ -163,6 +163,7 @@
 		0D25FF9A28F998C6001B7682 /* AlbertosTests */ = {
 			isa = PBXGroup;
 			children = (
+				0D4AF24C28FDA9A800605367 /* Helpers */,
 				0D4AF24628FDA9A800605367 /* Menu */,
 				0D4AF25228FDA9C700605367 /* Menu Item Detail */,
 			);
@@ -207,7 +208,6 @@
 		0D4AF24628FDA9A800605367 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				0D4AF24C28FDA9A800605367 /* Helpers */,
 				0D4AF24728FDA9A800605367 /* Presentation */,
 			);
 			path = Menu;
