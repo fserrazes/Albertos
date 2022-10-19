@@ -8,24 +8,6 @@ import AlbertosCore
 
 final class MenuListViewModelTests: XCTestCase {
     var cancellables = Set<AnyCancellable>()
-
-    func test_callsGivenGroupingFunction() throws {
-        try XCTSkipIf(true, "skipping this for now, keeping it to reuse part of the code later on")
-        
-        var called = false
-        let inputSections = [MenuSection.fixture()]
-        let spyClosure: ([MenuItem]) -> [MenuSection] = { items in
-            called = true
-            return inputSections
-        }
-        
-        let menuFetchingStub = MenuFetchingStub(returning: .success([.fixture()]))
-        let viewModel = MenuList.ViewModel(menuFetching: menuFetchingStub, menuGrouping: spyClosure)
-        let sections =  try viewModel.sections.get()
-        
-        XCTAssertTrue(called, "check that the given closure was called")
-        XCTAssertEqual(sections, inputSections, "returns value from closure")
-    }
     
     func test_whenFetchingStarts_publishesEmptyMenu() throws {
         let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingStub(returning: .success([.fixture()])))
