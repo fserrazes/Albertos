@@ -7,46 +7,64 @@ import AlbertosCore
 final class OrderControllerTests: XCTestCase {
     
     func test_initsWithEmptyOrder() {
-        let controller = OrderController()
+        let sut = makeSUT()
 
-        XCTAssertTrue(controller.order.items.isEmpty)
+        XCTAssertTrue(sut.order.items.isEmpty)
     }
     
     func test_whenItemNotInOrder_returnsFalse() {
-        let controller = OrderController()
-        controller.addToOrder(item: .fixture(name: "a name"))
+        let sut = makeSUT()
+        sut.addToOrder(item: .fixture(name: "a name"))
 
-        XCTAssertFalse(controller.isItemInOrder(.fixture(name: "another name")))
+        XCTAssertFalse(sut.isItemInOrder(.fixture(name: "another name")))
     }
     
     func test_whenItemInOrder_returnsTrue() {
-        let controller = OrderController()
-        controller.addToOrder(item: .fixture(name: "a name"))
+        let sut = makeSUT()
+        sut.addToOrder(item: .fixture(name: "a name"))
 
-        XCTAssertTrue(controller.isItemInOrder(.fixture(name: "a name")))
+        XCTAssertTrue(sut.isItemInOrder(.fixture(name: "a name")))
     }
     
     func test_addingItem_updatesOrder() {
-        let controller = OrderController()
+        let sut = makeSUT()
 
         let item = MenuItem.fixture()
-        controller.addToOrder(item: item)
+        sut.addToOrder(item: item)
 
-        XCTAssertEqual(controller.order.items.count, 1)
-        XCTAssertEqual(controller.order.items.first, item)
+        XCTAssertEqual(sut.order.items.count, 1)
+        XCTAssertEqual(sut.order.items.first, item)
     }
     
     func test_removeItem_updatesOrder() {
         let item = MenuItem.fixture(name: "a name")
         let otherItem = MenuItem.fixture(name: "another name")
         
-        let controller = OrderController()
-        controller.addToOrder(item: item)
-        controller.addToOrder(item: otherItem)
+        let sut = makeSUT()
+        sut.addToOrder(item: item)
+        sut.addToOrder(item: otherItem)
 
-        controller.removeFromOrder(item: item)
+        sut.removeFromOrder(item: item)
 
-        XCTAssertEqual(controller.order.items.count, 1)
-        XCTAssertEqual(controller.order.items.first, otherItem)
+        XCTAssertEqual(sut.order.items.count, 1)
+        XCTAssertEqual(sut.order.items.first, otherItem)
+    }
+    
+    // MARK: - Helpers
+    private func makeSUT() -> OrderController {
+        let controller = OrderController(orderStoring: OrderStoringFake())
+        return controller
+    }
+    
+    private class OrderStoringFake: OrderStoring {
+        private var order: Order = Order(items: [])
+
+        public func getOrder() -> Order {
+            return order
+        }
+
+        public func updateOrder(_ order: Order) {
+            self.order = order
+        }
     }
 }
