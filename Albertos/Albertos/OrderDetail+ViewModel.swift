@@ -47,8 +47,13 @@ extension OrderDetail {
                     let message = "There's been an error with your order. Please contact a waiter."
                     self?.alertToShow = Alert.ViewModel(title: "", message: message, buttonText: "Ok", buttonAction: self?.onAlertDismiss)
                 }, receiveValue: { [weak self] _ in
+                    guard let self = self else { return }
+                    
                     let message = "The payment was successful. Your food will be with you shortly."
-                    self?.alertToShow = Alert.ViewModel(title: "", message: message, buttonText: "Ok", buttonAction: self?.onAlertDismiss)
+                    self.alertToShow = Alert.ViewModel(title: "", message: message, buttonText: "Ok", buttonAction: {
+                        self.orderController.resetOrder()
+                        self.onAlertDismiss()
+                    })
                 })
                 .store(in: &cancellables)
 

@@ -33,5 +33,7 @@ public class OrderController: ObservableObject {
         order = Order(items: newItems)
     }
     
-    //TODO: Add reset order later (improvement in case the book dont address this scenario)
+    public func resetOrder() {
+        order = Order(items: [])
+    }
 }
