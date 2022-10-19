@@ -20,6 +20,6 @@ final class MenuRowViewModelTests: XCTestCase {
         
         let viewModel = MenuRow.ViewModel(item: item)
         
-        XCTAssertEqual(viewModel.text, "name 🌶")
+        XCTAssertEqual(viewModel.text, "name 🔥")
     }
 }
