@@ -26,8 +26,8 @@ final class OrderDetailViewModelTests: XCTestCase {
     
     func test_whenOrderIsEmpty_ShouldNotShowTotalAmount() {
         let orderController = OrderController(orderStoring: OrderStoringFake())
-        let viewModel = OrderDetail.ViewModel(orderController: orderController,
-                                              paymentProcessor: PaymentProcessingSpy(), onAlertDismiss: {})
+        let viewModel = OrderDetail.ViewModel(orderController : orderController,
+                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: {})
         
         XCTAssertNil(viewModel.totalText)
     }
@@ -37,7 +37,7 @@ final class OrderDetailViewModelTests: XCTestCase {
         orderController.addToOrder(item: .fixture(price: 1.0))
         orderController.addToOrder(item: .fixture(price: 2.3))
         let viewModel = OrderDetail.ViewModel(orderController: orderController,
-                                              paymentProcessor: PaymentProcessingSpy(), onAlertDismiss: {})
+                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: {})
 
         XCTAssertEqual(viewModel.totalText, "Total: $3.30")
     }
@@ -45,7 +45,7 @@ final class OrderDetailViewModelTests: XCTestCase {
     func test_whenOrderIsEmpty_HasNotItemNamesToShow() {
         let orderController = OrderController(orderStoring: OrderStoringFake())
         let viewModel = OrderDetail.ViewModel(orderController: orderController,
-                                              paymentProcessor: PaymentProcessingSpy(), onAlertDismiss: {})
+                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: {})
 
         XCTAssertEqual(viewModel.menuListItems.count, 0)
     }
@@ -55,13 +55,30 @@ final class OrderDetailViewModelTests: XCTestCase {
         orderController.addToOrder(item: .fixture(name: "a name"))
         orderController.addToOrder(item: .fixture(name: "another name"))
         let viewModel = OrderDetail.ViewModel(orderController: orderController,
-                                              paymentProcessor: PaymentProcessingSpy(), onAlertDismiss: {})
+                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: {})
 
         XCTAssertEqual(viewModel.menuListItems.count, 2)
         XCTAssertEqual(viewModel.menuListItems.first?.name, "a name")
         XCTAssertEqual(viewModel.menuListItems.last?.name, "another name")
     }
     
+    func testWhenOrderIsEmptyDoesNotShowCheckoutButton() {
+        let orderController = OrderController(orderStoring: OrderStoringFake())
+        let viewModel = OrderDetail.ViewModel(orderController: orderController,
+                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: {})
+
+        XCTAssertFalse(viewModel.shouldShowCheckoutButton)
+    }
+    
+    func testWhenOrderIsNonEmptyShowsCheckoutButton() {
+        let orderController = OrderController(orderStoring: OrderStoringFake())
+        orderController.addToOrder(item: .fixture(name: "a name"))
+        
+        let viewModel = OrderDetail.ViewModel(orderController: orderController,
+                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: {})
+
+        XCTAssertTrue(viewModel.shouldShowCheckoutButton)
+    }
     // MARK: - Proccessing Payments
     
     func test_whenCheckoutButtonTapped_StartsPaymentProcessingFlow() {
@@ -161,6 +178,12 @@ final class OrderDetailViewModelTests: XCTestCase {
         }
     }
     
+    private class PaymentProcessingDummy: PaymentProcessing {
+        func process(order: Order) -> AnyPublisher<Void, Error> {
+            return Result<Void, Error>.success(()).publisher.eraseToAnyPublisher()
+        }
+    }
+    
     private class PaymentProcessingStub: PaymentProcessing {
         let result: Result<Void, Error>
         
@@ -178,6 +201,8 @@ final class OrderDetailViewModelTests: XCTestCase {
     
     //Using a wait time of around 1 second seems to result in occasional test timeout failures when using `XCTNSPredicateExpectation`.
     private var timeoutForPredicateExpectations: Double { 2.0 }
+    
+    private let alertDismissDummy: () -> Void = {}
 }
 
 extension Order: Equatable {
