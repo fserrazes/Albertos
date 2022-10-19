@@ -67,7 +67,8 @@ final class OrderDetailViewModelTests: XCTestCase {
         
         let paymentProcessingSpy = PaymentProcessingSpy()
         
-        let viewModel = OrderDetail.ViewModel( orderController: orderController, paymentProcessor: paymentProcessingSpy, onAlertDismiss: {})
+        let viewModel = OrderDetail.ViewModel(orderController: orderController,
+                                              paymentProcessor: paymentProcessingSpy, onAlertDismiss: {})
         viewModel.checkout()
         
         XCTAssertEqual(paymentProcessingSpy.receivedOrder,orderController.order)
