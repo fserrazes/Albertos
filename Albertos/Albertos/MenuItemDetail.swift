@@ -10,11 +10,12 @@ struct MenuItemDetail: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(viewModel.name)
+                .font(.title3)
                 .fontWeight(.bold)
 
             if let spicy = viewModel.spicy {
                 Text(spicy)
-                    .font(Font.body.italic())
+                    .foregroundColor(.crimson)
             }
 
             Text(viewModel.price)
