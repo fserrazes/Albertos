@@ -37,7 +37,7 @@ struct MenuList: View {
 
 struct MenuList_Previews: PreviewProvider {
     static var previews: some View {
-        MenuList(viewModel: .init(menuFetching: MenuFetchingPlaceholder()))
+        MenuList(viewModel: .init(menuFetcher: MenuFetchingPlaceholder().fetchMenu()))
             .environmentObject(OrderController())
     }
 }

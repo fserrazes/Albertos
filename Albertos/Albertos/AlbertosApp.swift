@@ -4,6 +4,12 @@
 import SwiftUI
 import AlbertosCore
 
+private let menuFectherLoader = URLSession.shared
+    .dataTaskPublisher(for: URL(string: "https://s3.amazonaws.com/mokacoding/menu_response.json")!)
+    .map(\.data)
+    .decode(type: [MenuItem].self, decoder: JSONDecoder())
+    .eraseToAnyPublisher()
+
 @main
 struct AlbertosApp: App {
     let orderController = OrderController()
@@ -13,7 +19,7 @@ struct AlbertosApp: App {
         WindowGroup {
             ZStack(alignment: .bottom) {
                 NavigationStack {
-                    MenuList(viewModel: .init(menuFetching: MenuFetcher()))
+                    MenuList(viewModel: .init(menuFetcher: menuFectherLoader))
                         .navigationTitle("Alberto's 🇮🇹")
                 }
                 OrderButton(viewModel: .init(orderController: orderController))

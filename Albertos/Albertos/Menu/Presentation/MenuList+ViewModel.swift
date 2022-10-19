@@ -8,12 +8,11 @@ extension MenuList {
     class ViewModel: ObservableObject {
         @Published private (set) var sections: Result<[MenuSection], Error> = .success([])
 
-        private  var cancellables = Set<AnyCancellable>()
+        private var cancellables = Set<AnyCancellable>()
         
-        init(menuFetching: MenuFetching,
+        init(menuFetcher: AnyPublisher<[MenuItem], Error>,
              menuGrouping: @escaping ([MenuItem]) -> [MenuSection] = groupMenuByCategory) {
-            menuFetching
-                .fetchMenu()
+            menuFetcher
                 .map(menuGrouping)
                 .sink( receiveCompletion: { [weak self] completion in
                     guard case .failure(let error) = completion else { return }
