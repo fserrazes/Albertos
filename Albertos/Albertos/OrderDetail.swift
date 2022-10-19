@@ -23,18 +23,13 @@ struct OrderDetail: View {
                 Text(total)
             }
             
-            //TODO: Checkout buttom and OrderButton has the same style
             if viewModel.shouldShowCheckoutButton {
                 Button {
                     viewModel.checkout()
                 } label: {
                     Text(viewModel.checkoutButtonText)
-                        .font(Font.callout.bold())
-                        .padding(12)
-                        .foregroundColor(.white)
-                        .background(Color.red)
-                        .cornerRadius(10.0)
-                }
+                }.buttonStyle(AlbertosButtonStyle())
+                
             }
             
             Spacer()

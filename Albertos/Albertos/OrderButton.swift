@@ -17,12 +17,8 @@ struct OrderButton: View {
             self.showingDetail.toggle()
         } label: {
             Text(viewModel.text)
-                .font(Font.callout.bold())
-                .padding(12)
-                .foregroundColor(.white)
-                .background(.red)
-                .cornerRadius(10.0)
         }
+        .buttonStyle(AlbertosButtonStyle())
         .sheet(isPresented: $showingDetail) {
             OrderDetail(viewModel: .init(orderController: orderController,
                                          paymentProcessor: paymentProcessor,
