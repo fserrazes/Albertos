@@ -74,8 +74,11 @@ final class OrderDetailViewModelTests: XCTestCase {
     }
     
     func test_whenPaymentSucceeds_UpdatesPropertyToShowConfirmationAlert() {
+        var called = false
         let paymentProcessingStub = PaymentProcessingStub(returning: .success(()))
-        let viewModel = OrderDetail.ViewModel(orderController: OrderController(), paymentProcessor: paymentProcessingStub, onAlertDismiss: {})
+        let viewModel = OrderDetail.ViewModel(orderController: OrderController(),
+                                              paymentProcessor: paymentProcessingStub,
+                                              onAlertDismiss: { called = true })
         
         // Use XCTNSPredicateExpectation because we cannot explicitly fulfill an expectation once the async code under test has no callback
         let predicate = NSPredicate { _, _ in viewModel.alertToShow != nil }
@@ -88,12 +91,17 @@ final class OrderDetailViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.alertToShow?.title, "")
         XCTAssertEqual(viewModel.alertToShow?.message, "The payment was successful. Your food will be with you shortly.")
         XCTAssertEqual(viewModel.alertToShow?.buttonText, "Ok")
+        
+        viewModel.alertToShow?.buttonAction?()
+        XCTAssertTrue(called)
     }
     
     func test_whenPaymentFails_UpdatesPropertyToShowErrorAlert() {
+        var called = false
         let paymentProcessingStub = PaymentProcessingStub(returning: .failure(anyNSError))
         let viewModel = OrderDetail.ViewModel(orderController: OrderController(),
-                                              paymentProcessor: paymentProcessingStub, onAlertDismiss: {})
+                                              paymentProcessor: paymentProcessingStub,
+                                              onAlertDismiss: { called = true })
         
         // Use XCTNSPredicateExpectation because we cannot explicitly fulfill an expectation once the async code under test has no callback
         let predicate = NSPredicate { _, _ in viewModel.alertToShow != nil }
@@ -106,6 +114,9 @@ final class OrderDetailViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.alertToShow?.title, "")
         XCTAssertEqual(viewModel.alertToShow?.message, "There's been an error with your order. Please contact a waiter.")
         XCTAssertEqual(viewModel.alertToShow?.buttonText, "Ok")
+        
+        viewModel.alertToShow?.buttonAction?()
+        XCTAssertTrue(called)
     }
     
     func test_whenPaymentSucceeds_DismissingTheAlertRunsTheGivenClosure() {
@@ -123,7 +134,6 @@ final class OrderDetailViewModelTests: XCTestCase {
         wait(for: [expectation], timeout: timeoutForPredicateExpectations)
         
         viewModel.alertToShow?.buttonAction?()
-        
         XCTAssertTrue(called)
     }
     
