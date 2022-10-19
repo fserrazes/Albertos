@@ -5,7 +5,7 @@ import Combine
 import Foundation
 import AlbertosCore
 
-public class MenuFetchingPlaceholder: MenuFetching {
+public class MenuFetchingPlaceholder {
     public func fetchMenu() -> AnyPublisher<[MenuItem], Error> {
         return Future { $0(.success(menu)) }
         // Use a delay to simulate async fetch
