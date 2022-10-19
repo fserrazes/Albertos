@@ -2,6 +2,7 @@
 //  Copyright © 2022 Flavio Serrazes. All rights reserved.
 
 import XCTest
+import AlbertosCore
 
 class OrderTests: XCTestCase {
     
