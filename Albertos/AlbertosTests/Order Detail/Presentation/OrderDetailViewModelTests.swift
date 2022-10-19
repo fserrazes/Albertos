@@ -11,7 +11,7 @@ final class OrderDetailViewModelTests: XCTestCase {
     func test_headerText() {
         let orderController = OrderController(orderStoring: OrderStoringFake())
         let viewModel = OrderDetail.ViewModel(orderController: orderController,
-                                              paymentProcessor: PaymentProcessingSpy(), onAlertDismiss: {})
+                                              paymentProcessor: PaymentProcessingSpy(), onAlertDismiss: alertDismissDummy)
 
         XCTAssertEqual(viewModel.headerText, "Your Order")
     }
@@ -19,7 +19,7 @@ final class OrderDetailViewModelTests: XCTestCase {
     func test_emptyMenu_FallbackText() {
         let orderController = OrderController(orderStoring: OrderStoringFake())
         let viewModel = OrderDetail.ViewModel(orderController: orderController,
-                                              paymentProcessor: PaymentProcessingSpy(), onAlertDismiss: {})
+                                              paymentProcessor: PaymentProcessingSpy(), onAlertDismiss: alertDismissDummy)
 
         XCTAssertEqual(viewModel.emptyMenuFallbackText, "Add dishes to the order to see them here")
     }
@@ -27,7 +27,7 @@ final class OrderDetailViewModelTests: XCTestCase {
     func test_whenOrderIsEmpty_ShouldNotShowTotalAmount() {
         let orderController = OrderController(orderStoring: OrderStoringFake())
         let viewModel = OrderDetail.ViewModel(orderController : orderController,
-                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: {})
+                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: alertDismissDummy)
         
         XCTAssertNil(viewModel.totalText)
     }
@@ -37,7 +37,7 @@ final class OrderDetailViewModelTests: XCTestCase {
         orderController.addToOrder(item: .fixture(price: 1.0))
         orderController.addToOrder(item: .fixture(price: 2.3))
         let viewModel = OrderDetail.ViewModel(orderController: orderController,
-                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: {})
+                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: alertDismissDummy)
 
         XCTAssertEqual(viewModel.totalText, "Total: $3.30")
     }
@@ -45,7 +45,7 @@ final class OrderDetailViewModelTests: XCTestCase {
     func test_whenOrderIsEmpty_HasNotItemNamesToShow() {
         let orderController = OrderController(orderStoring: OrderStoringFake())
         let viewModel = OrderDetail.ViewModel(orderController: orderController,
-                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: {})
+                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: alertDismissDummy)
 
         XCTAssertEqual(viewModel.menuListItems.count, 0)
     }
@@ -55,7 +55,7 @@ final class OrderDetailViewModelTests: XCTestCase {
         orderController.addToOrder(item: .fixture(name: "a name"))
         orderController.addToOrder(item: .fixture(name: "another name"))
         let viewModel = OrderDetail.ViewModel(orderController: orderController,
-                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: {})
+                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: alertDismissDummy)
 
         XCTAssertEqual(viewModel.menuListItems.count, 2)
         XCTAssertEqual(viewModel.menuListItems.first?.name, "a name")
@@ -65,7 +65,7 @@ final class OrderDetailViewModelTests: XCTestCase {
     func testWhenOrderIsEmptyDoesNotShowCheckoutButton() {
         let orderController = OrderController(orderStoring: OrderStoringFake())
         let viewModel = OrderDetail.ViewModel(orderController: orderController,
-                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: {})
+                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: alertDismissDummy)
 
         XCTAssertFalse(viewModel.shouldShowCheckoutButton)
     }
@@ -75,7 +75,7 @@ final class OrderDetailViewModelTests: XCTestCase {
         orderController.addToOrder(item: .fixture(name: "a name"))
         
         let viewModel = OrderDetail.ViewModel(orderController: orderController,
-                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: {})
+                                              paymentProcessor: PaymentProcessingDummy(), onAlertDismiss: alertDismissDummy)
 
         XCTAssertTrue(viewModel.shouldShowCheckoutButton)
     }
@@ -89,7 +89,7 @@ final class OrderDetailViewModelTests: XCTestCase {
         let paymentProcessingSpy = PaymentProcessingSpy()
         
         let viewModel = OrderDetail.ViewModel(orderController: orderController,
-                                              paymentProcessor: paymentProcessingSpy, onAlertDismiss: {})
+                                              paymentProcessor: paymentProcessingSpy, onAlertDismiss: alertDismissDummy)
         viewModel.checkout()
         
         XCTAssertEqual(paymentProcessingSpy.receivedOrder,orderController.order)
@@ -150,7 +150,7 @@ final class OrderDetailViewModelTests: XCTestCase {
         let paymentProcessingStub = PaymentProcessingStub(returning: .success(()))
         let viewModel = OrderDetail.ViewModel(orderController: orderController,
                                               paymentProcessor: paymentProcessingStub,
-                                              onAlertDismiss: { })
+                                              onAlertDismiss: alertDismissDummy)
         
         // Perform the checkout and wait for it to succeed
         let predicate = NSPredicate { _, _ in viewModel.alertToShow != nil }
