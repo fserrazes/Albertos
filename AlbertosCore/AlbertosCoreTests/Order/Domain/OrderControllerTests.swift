@@ -2,7 +2,6 @@
 //  Copyright © 2022 Flavio Serrazes. All rights reserved.
 
 import XCTest
-import AlbertosCore
 
 final class OrderControllerTests: XCTestCase {
     

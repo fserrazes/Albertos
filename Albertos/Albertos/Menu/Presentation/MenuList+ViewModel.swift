@@ -22,7 +22,6 @@ extension MenuList {
                     self?.sections = .success(value)
                 })
                 .store(in: &cancellables)
-
         }
     }
 }

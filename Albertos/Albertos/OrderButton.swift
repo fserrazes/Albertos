@@ -29,7 +29,7 @@ struct OrderButton: View {
 
 struct OrderButton_Previews: PreviewProvider {
     static var previews: some View {
-        OrderButton(viewModel: .init(orderController: OrderController()))
+        OrderButton(viewModel: .init(orderController: previewOrderController))
             .environmentObject(OrderController())
             .environmentObject(PaymentProcessingProxy())
     }

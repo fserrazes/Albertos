@@ -2,7 +2,6 @@
 //  Copyright © 2022 Flavio Serrazes. All rights reserved.
 
 import SwiftUI
-import AlbertosCore
 
 struct MenuItemDetail: View {
     @ObservedObject private(set) var viewModel: ViewModel
@@ -34,6 +33,6 @@ struct MenuItemDetail: View {
 struct MenuItemDetail_Previews: PreviewProvider {
     static var previews: some View {
         let item = menu.first!
-        MenuItemDetail(viewModel: .init(item: item, orderController: OrderController()))
+        MenuItemDetail(viewModel: .init(item: item, orderController: previewOrderController))
     }
 }
