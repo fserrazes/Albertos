@@ -3,7 +3,7 @@
 
 import Foundation
 
-public struct MenuItem: Identifiable, Decodable {
+public struct MenuItem: Identifiable, Codable {
     public var id: String { name }
     
     public let category: String

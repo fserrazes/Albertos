@@ -25,6 +25,8 @@
 		0D4AF26C28FEA00F00605367 /* OrderControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF26B28FEA00F00605367 /* OrderControllerTests.swift */; };
 		0D4AF26F28FEA10900605367 /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF26E28FEA10900605367 /* OrderTests.swift */; };
 		0DC7C51728FEFCC30072C5DB /* Order+HippoPayments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C51628FEFCC30072C5DB /* Order+HippoPayments.swift */; };
+		0DC7C545290009000072C5DB /* OrderStoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C544290009000072C5DB /* OrderStoring.swift */; };
+		0DC7C54729000DA40072C5DB /* UserDefaults+OrderStoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C54629000DA40072C5DB /* UserDefaults+OrderStoring.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		0D4AF26B28FEA00F00605367 /* OrderControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderControllerTests.swift; path = AlbertosCoreTests/Order/Domain/OrderControllerTests.swift; sourceTree = SOURCE_ROOT; };
 		0D4AF26E28FEA10900605367 /* OrderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
 		0DC7C51628FEFCC30072C5DB /* Order+HippoPayments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+HippoPayments.swift"; sourceTree = "<group>"; };
+		0DC7C544290009000072C5DB /* OrderStoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderStoring.swift; path = Order/Storing/OrderStoring.swift; sourceTree = "<group>"; };
+		0DC7C54629000DA40072C5DB /* UserDefaults+OrderStoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserDefaults+OrderStoring.swift"; path = "Order/Storing/UserDefaults+OrderStoring.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 			children = (
 				0D4AF23B28FDA17900605367 /* Feature */,
 				0D4AF23E28FDA24600605367 /* Domain */,
+				0DC7C543290008AC0072C5DB /* Storing */,
 			);
 			name = Order;
 			sourceTree = "<group>";
@@ -256,6 +261,23 @@
 			name = Feature;
 			path = AlbertosCoreTests/Order/Feature;
 			sourceTree = SOURCE_ROOT;
+		};
+		0DC7C543290008AC0072C5DB /* Storing */ = {
+			isa = PBXGroup;
+			children = (
+				0DC7C54829000DAD0072C5DB /* Helpers */,
+				0DC7C544290009000072C5DB /* OrderStoring.swift */,
+			);
+			name = Storing;
+			sourceTree = "<group>";
+		};
+		0DC7C54829000DAD0072C5DB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0DC7C54629000DA40072C5DB /* UserDefaults+OrderStoring.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -374,7 +396,9 @@
 				0D4AF25828FDAC3700605367 /* Order.swift in Sources */,
 				0D25FFEA28FD9993001B7682 /* URLSession+NetworkFetching.swift in Sources */,
 				0D25FF2C28F978FA001B7682 /* MenuItem.swift in Sources */,
+				0DC7C545290009000072C5DB /* OrderStoring.swift in Sources */,
 				0D25FFE328FD5F1D001B7682 /* MenuFetching.swift in Sources */,
+				0DC7C54729000DA40072C5DB /* UserDefaults+OrderStoring.swift in Sources */,
 				0D25FF3228F97A42001B7682 /* MenuGrouping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

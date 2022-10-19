@@ -43,6 +43,7 @@
 		0DC7C53B28FF307A0072C5DB /* HippoAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC7C53928FF307A0072C5DB /* HippoAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DC7C54028FF379C0072C5DB /* Alert+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C53F28FF379C0072C5DB /* Alert+ViewModel.swift */; };
 		0DC7C54228FF3BB80072C5DB /* SharedHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C54128FF3BB80072C5DB /* SharedHelpers.swift */; };
+		0DC7C54A290023AC0072C5DB /* OrderStoringFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C549290023AC0072C5DB /* OrderStoringFake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		0DC7C53928FF307A0072C5DB /* HippoAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HippoAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC7C53F28FF379C0072C5DB /* Alert+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+ViewModel.swift"; sourceTree = "<group>"; };
 		0DC7C54128FF3BB80072C5DB /* SharedHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHelpers.swift; sourceTree = "<group>"; };
+		0DC7C549290023AC0072C5DB /* OrderStoringFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStoringFake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 			children = (
 				0DC7C54128FF3BB80072C5DB /* SharedHelpers.swift */,
 				0D4AF24D28FDA9A800605367 /* Menu+Fixture.swift */,
+				0DC7C549290023AC0072C5DB /* OrderStoringFake.swift */,
 				0D4AF27C28FEBC9800605367 /* XCTestCase+MemoryLeaksTracking.swift */,
 			);
 			path = Helpers;
@@ -584,6 +587,7 @@
 			files = (
 				0D4AF28128FEBFAD00605367 /* OrderDetailViewModelTests.swift in Sources */,
 				0D4AF25128FDA9A800605367 /* Menu+Fixture.swift in Sources */,
+				0DC7C54A290023AC0072C5DB /* OrderStoringFake.swift in Sources */,
 				0DC7C54228FF3BB80072C5DB /* SharedHelpers.swift in Sources */,
 				0D4AF24E28FDA9A800605367 /* MenuRowViewModelTests.swift in Sources */,
 				0D4AF25428FDAA0300605367 /* MenuItemDetailViewModelTests.swift in Sources */,

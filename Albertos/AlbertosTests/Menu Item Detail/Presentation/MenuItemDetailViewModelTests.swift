@@ -20,7 +20,7 @@ final class MenuItemDetailViewModelTests: XCTestCase {
     
     func test_whenItemIsNotInOrder_ButtonSaysAdd() {
         let item = MenuItem.fixture()
-        let orderController = OrderController()
+        let orderController = OrderController(orderStoring: OrderStoringFake())
         let viewModel = MenuItemDetail.ViewModel(item: item, orderController: orderController)
 
         let text = viewModel.addOrRemoveFromOrderButtonText
@@ -30,7 +30,7 @@ final class MenuItemDetailViewModelTests: XCTestCase {
     
     func test_whenItemIsInOrder_ButtonActionRemovesIt() {
         let item = MenuItem.fixture()
-        let orderController = OrderController()
+        let orderController = OrderController(orderStoring: OrderStoringFake())
         orderController.addToOrder(item: item)
         let viewModel = MenuItemDetail.ViewModel(item: item, orderController: orderController)
         
@@ -42,7 +42,7 @@ final class MenuItemDetailViewModelTests: XCTestCase {
     
     func test_whenItemIsNotInOrder_ButtonActionAddsIt() {
         let item = MenuItem.fixture()
-        let orderController = OrderController()
+        let orderController = OrderController(orderStoring: OrderStoringFake())
         let viewModel = MenuItemDetail.ViewModel(item: item, orderController: orderController)
 
         viewModel.addOrRemoveFromOrder()

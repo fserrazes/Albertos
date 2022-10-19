@@ -27,7 +27,7 @@ final class OrderButtonViewModelTests: XCTestCase {
     // MARK: - Helpers
     
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (OrderButton.ViewModel, OrderController) {
-        let orderController = OrderController()
+        let orderController = OrderController(orderStoring: OrderStoringFake())
         let sut = OrderButton.ViewModel(orderController: orderController)
      
         trackForMemoryLeaks(orderController, file: file, line: line)

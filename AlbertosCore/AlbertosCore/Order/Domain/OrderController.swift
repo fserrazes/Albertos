@@ -5,12 +5,11 @@ import Foundation
 
 public class OrderController: ObservableObject {
     @Published public private(set) var order: Order
+    private let orderStoring: OrderStoring
     
-    public var items: [MenuItem] { order.items }
-    public var total: Double { order.total }
-    
-    public init(order: Order = Order(items: [])) {
-        self.order = order
+    public init(orderStoring: OrderStoring = UserDefaults.standard) {
+        self.orderStoring = orderStoring
+        order = orderStoring.getOrder()
     }
     
     public func isItemInOrder(_ item: MenuItem) -> Bool {
@@ -18,7 +17,7 @@ public class OrderController: ObservableObject {
     }
     
     public func addToOrder(item: MenuItem) {
-        order = Order(items: order.items + [item])
+        updateOrder(with: Order(items: order.items + [item]))
     }
     
     public func removeFromOrder(item: MenuItem) {
@@ -30,10 +29,15 @@ public class OrderController: ObservableObject {
             return .none
         }
 
-        order = Order(items: newItems)
+        updateOrder(with: Order(items: newItems))
     }
     
     public func resetOrder() {
-        order = Order(items: [])
+        updateOrder(with: Order(items: []))
+    }
+    
+    private func updateOrder(with newOrder: Order) {
+        orderStoring.updateOrder(newOrder)
+        order = newOrder
     }
 }
