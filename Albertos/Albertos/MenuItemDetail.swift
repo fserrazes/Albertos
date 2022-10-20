@@ -14,7 +14,7 @@ struct MenuItemDetail: View {
 
             if let spicy = viewModel.spicy {
                 Text(spicy)
-                    .foregroundColor(.crimson)
+                    .foregroundColor(.accentColor)
             }
 
             Text(viewModel.price)
