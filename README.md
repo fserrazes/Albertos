@@ -26,7 +26,7 @@ The source code is part of the tutorial in the Test-Driven Development in Swift 
 
 ## Demo
 
-![](screen_recording.gif)
+![](.images/screen_recording.gif)
 
 ## Considerations and Decisions taken
 
