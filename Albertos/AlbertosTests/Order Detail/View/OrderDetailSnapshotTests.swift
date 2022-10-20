@@ -19,10 +19,27 @@ final class OrderDetailSnapshotTests: XCTestCase {
                named: "IMAGE_ORDER_DETAIL_WITH_NO_ITEMS_extraExtraExtraLarge")
     }
     
+    func test_orderDetail_withOrders() throws {
+        let orders = [menu[0], menu[2], menu[4], menu[6]]
+        let sut = makeSUT(withOrders: orders)
+        
+        assert(snapshot: sut.snapshot(for: .iPhone13(style: .light)),
+               named: "IMAGE_ORDER_DETAIL_WITH_ITEMS_light")
+        assert(snapshot: sut.snapshot(for: .iPhone13(style: .dark)),
+               named: "IMAGE_ORDER_DETAIL_WITH_ITEMS_dark")
+        assert(snapshot: sut.snapshot(for: .iPhone13(style: .light, contentSize: .extraExtraExtraLarge)),
+               named: "IMAGE_ORDER_DETAIL_WITH_ITEMS_extraExtraExtraLarge")
+    }
+    
     // MARK: - Helpers
 
-    private func makeSUT() -> (UIHostingController<OrderDetail>) {
+    private func makeSUT(withOrders: [MenuItem] = []) -> UIHostingController<OrderDetail> {
         let controller = OrderController(orderStoring: OrderStoringFake())
+        
+        for order in withOrders {
+            controller.addToOrder(item: order)
+        }
+        
         let sut = OrderDetail(viewModel: .init(orderController: controller,
                                                paymentProcessor: previewPaymentProcessor, onAlertDismiss: {}))
         
