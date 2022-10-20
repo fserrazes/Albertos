@@ -13,7 +13,7 @@ The source code is part of the tutorial in the Test-Driven Development in Swift 
 
 | Module           | Tests | Lines | Coverage |
 |------------------|-------|-------|----------|
-| Albertos         |  27   | 438   | 58,5%    |
+| Albertos         |  28   | 431   | 58,9%    |
 | AlbertosCore     |  11   |  87   | 96,6%    |
 
 **Notes:**

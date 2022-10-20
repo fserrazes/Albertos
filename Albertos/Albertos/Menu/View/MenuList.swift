@@ -27,6 +27,7 @@ struct MenuList: View {
                     .foregroundColor(.red)
                 Text(error.localizedDescription)
                     .italic()
+                    .padding(10)
         }
     }
     

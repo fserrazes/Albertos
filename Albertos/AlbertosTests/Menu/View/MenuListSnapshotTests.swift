@@ -22,6 +22,20 @@ final class MenuListSnapshotTests: XCTestCase {
                named: "IMAGE_MENU_LIST_WITH_ITEMS_extraExtraExtraLarge")
     }
     
+    func test_menuList_withConnectivityError() {
+        let (sut, loader) = makeSUT()
+
+        loader.send(completion: .failure(anyNSError))
+
+        assert(snapshot: sut.snapshot(for: .iPhone13(style: .light)),
+               named: "IMAGE_MENU_LIST_WITH_CONNECTIVITY_ERROR_light")
+        assert(snapshot: sut.snapshot(for: .iPhone13(style: .dark)),
+               named: "IMAGE_MENU_LIST_WITH_CONNECTIVITY_ERROR_dark")
+        assert(snapshot: sut.snapshot(for: .iPhone13(style: .light, contentSize: .extraExtraExtraLarge)),
+            named: "IMAGE_MENU_LIST_WITH_CONNECTIVITY_ERROR_extraExtraExtraLarge"
+        )
+    }
+    
     // MARK: - Helpers
 
     private func makeSUT() -> (UIHostingController<MenuList>, PassthroughSubject<[MenuItem], Error>) {
