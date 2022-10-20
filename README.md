@@ -1,6 +1,7 @@
 # Alberto's Restaurant
 
 <p>
+  <img src="https://github.com/fserrazes/Albertos/actions/workflows/CI.yml/badge.svg" />
     <img src="https://img.shields.io/badge/iOS-16.0+-orange.svg" />
 </p>
 
@@ -23,7 +24,9 @@ The source code is part of the tutorial in the Test-Driven Development in Swift 
 
 * It's possible target AlbertosCore to Mac Device in order to have faster feedback from tests.
 
----
+## Demo
+
+![](screen_recording.gif)
 
 ## Considerations and Decisions taken
 
@@ -46,8 +49,6 @@ The main differences and changes from the book:
 
 7. Small compromises were made to facilitate the tracking of project progress. Besides being best practice!
 
----
-
 ## TODO's
 
 * Create snapshot test.
@@ -55,6 +56,9 @@ The main differences and changes from the book:
 * Add image, description in MenuDetail.
 * Make possible to order more than one of the same item.
 * Move url path and change json file with image and description).
+* When order are placed from MenuDetail view after checkout the screen is dismissed. However, it would be nice if it returned to the initial screen.
+
+---
 
 ## Documentation (Book)
 + [Test-Driven Development in Swift: Compile Better Code with XCTest and TDD ](https://www.amazon.com/Test-Driven-Development-Swift-Compile-Better-ebook/dp/B098HZ9LLD/ref=sr_1_1?crid=V77WWNISPC48&keywords=Test-Driven+Development+in+Swift%3A+Compile+Better+Code+with+XCTest+and+TDD+by+Gio+Lodi+%28Apress%2C+2021%29.&qid=1666260006&qu=eyJxc2MiOiItMC4wMSIsInFzYSI6IjAuMDAiLCJxc3AiOiIwLjAwIn0%3D&sprefix=test-driven+development+in+swift+compile+better+code+with+xctest+and+tdd+by+gio+lodi+apress%2C+2021+.%2Caps%2C212&sr=8-1) by Gio Lodi (Apress, 2021).
