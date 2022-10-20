@@ -14,7 +14,7 @@ extension MenuList {
              menuGrouping: @escaping ([MenuItem]) -> [MenuSection] = groupMenuByCategory) {
             menuFetcher
                 .map(menuGrouping)
-                .receive(on: DispatchQueue.main)
+//                .receive(on: DispatchQueue.main)
                 .sink( receiveCompletion: { [weak self] completion in
                     guard case .failure(let error) = completion else { return }
                     self?.sections = .failure(error)
