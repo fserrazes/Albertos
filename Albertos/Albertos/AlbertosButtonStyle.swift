@@ -9,7 +9,7 @@ struct AlbertosButtonStyle: ButtonStyle {
             .font(Font.callout.bold())
             .padding(12)
             .foregroundColor(.white)
-            .background(Color.crimson)
+            .background(Color.accentColor)
             .cornerRadius(10.0)
     }
 }

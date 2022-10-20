@@ -44,7 +44,6 @@
 		0DC7C54228FF3BB80072C5DB /* SharedHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C54128FF3BB80072C5DB /* SharedHelpers.swift */; };
 		0DC7C54A290023AC0072C5DB /* OrderStoringFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C549290023AC0072C5DB /* OrderStoringFake.swift */; };
 		0DC7C54D29009E460072C5DB /* AlbertosButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C54C29009E450072C5DB /* AlbertosButtonStyle.swift */; };
-		0DC7C54F2900A0C60072C5DB /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C54E2900A0C60072C5DB /* Color+Custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +117,6 @@
 		0DC7C54128FF3BB80072C5DB /* SharedHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHelpers.swift; sourceTree = "<group>"; };
 		0DC7C549290023AC0072C5DB /* OrderStoringFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStoringFake.swift; sourceTree = "<group>"; };
 		0DC7C54C29009E450072C5DB /* AlbertosButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertosButtonStyle.swift; sourceTree = "<group>"; };
-		0DC7C54E2900A0C60072C5DB /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,7 +416,6 @@
 		0DC7C54B29009D530072C5DB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0DC7C54E2900A0C60072C5DB /* Color+Custom.swift */,
 				0DC7C53F28FF379C0072C5DB /* Alert+ViewModel.swift */,
 				0DC7C54C29009E450072C5DB /* AlbertosButtonStyle.swift */,
 			);
@@ -563,7 +560,6 @@
 				0DC7C54028FF379C0072C5DB /* Alert+ViewModel.swift in Sources */,
 				0DC7C51C28FF1B060072C5DB /* PaymentProcessingProxy.swift in Sources */,
 				0D4AF23928FD9DDE00605367 /* DataModel.swift in Sources */,
-				0DC7C54F2900A0C60072C5DB /* Color+Custom.swift in Sources */,
 				0DC7C51A28FF16B70072C5DB /* OrderButton+ViewModel.swift in Sources */,
 				0DC7C51028FEF5400072C5DB /* OrderDetail+ViewModel.swift in Sources */,
 				0D25FFC128F9B0BB001B7682 /* MenuRow.swift in Sources */,

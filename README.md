@@ -52,7 +52,6 @@ The main differences and changes from the book:
 ## TODO's
 
 * Create snapshot test.
-* Change button color to Assets folder and remove the Color+Custom file.
 * Add image, description in MenuDetail.
 * Make possible to order more than one of the same item.
 * Move url path and change json file with image and description).
