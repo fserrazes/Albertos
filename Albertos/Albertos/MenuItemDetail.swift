@@ -25,7 +25,7 @@ struct MenuItemDetail: View {
 
             Spacer()
         }
-        .padding(8)
+        .padding(20)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
 }
