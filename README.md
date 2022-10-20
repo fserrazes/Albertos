@@ -13,16 +13,18 @@ The source code is part of the tutorial in the Test-Driven Development in Swift 
 
 | Module           | Tests | Lines | Coverage |
 |------------------|-------|-------|----------|
-| Albertos         |  28   | 431   | 58,9%    |
+| Albertos         |  33   | 432   | 88,4%    |
 | AlbertosCore     |  11   |  87   | 96,6%    |
 
 **Notes:**
 
-* No tests were created for The HyppoPayments and HyppoAnalytics frameworks because they represent pseudo third-party code responsible to process and track payments.
+* All logic was extracted from the view to be as clean as possible and tested separated.
 
-* All logic was extracted from the view to be as clean as possible and tested separated, so there are no tests in SwiftUI Views, Protocols, Extensions and Button Styles e.g). That's why the coverage it's lower.
+* Snapshot tests have been created for SwiftUI Views.
 
 * It's possible target AlbertosCore to Mac Device in order to have faster feedback from tests.
+
+* No tests were created for The HyppoPayments and HyppoAnalytics frameworks because they represent pseudo third-party code responsible to process and track payments.
 
 ## Demo
 
@@ -51,8 +53,7 @@ The main differences and changes from the book:
 
 ## TODO's
 
-* Create snapshot test.
-* Add image, description in MenuDetail.
+* Add image and description in MenuDetail.
 * Make possible to order more than one of the same item.
 * Move url path and change json file with image and description).
 * When order are placed from MenuDetail view after checkout the screen is dismissed. However, it would be nice if it returned to the initial screen.
@@ -60,4 +61,4 @@ The main differences and changes from the book:
 ---
 
 ## Documentation (Book)
-+ [Test-Driven Development in Swift: Compile Better Code with XCTest and TDD ](https://www.amazon.com/Test-Driven-Development-Swift-Compile-Better-ebook/dp/B098HZ9LLD/ref=sr_1_1?crid=V77WWNISPC48&keywords=Test-Driven+Development+in+Swift%3A+Compile+Better+Code+with+XCTest+and+TDD+by+Gio+Lodi+%28Apress%2C+2021%29.&qid=1666260006&qu=eyJxc2MiOiItMC4wMSIsInFzYSI6IjAuMDAiLCJxc3AiOiIwLjAwIn0%3D&sprefix=test-driven+development+in+swift+compile+better+code+with+xctest+and+tdd+by+gio+lodi+apress%2C+2021+.%2Caps%2C212&sr=8-1) by Gio Lodi (Apress, 2021).
++ [Test-Driven Development in Swift: Compile Better Code with XCTest and TDD ](https://amzn.to/3sbbqED) by Gio Lodi (Apress, 2021).
