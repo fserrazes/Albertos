@@ -5,7 +5,6 @@ import SwiftUI
 import AlbertosCore
 
 struct OrderButton: View {
-    @EnvironmentObject var orderController: OrderController
     @EnvironmentObject var paymentProcessor: PaymentProcessingProxy
     
     @State private(set) var showingDetail: Bool = false
@@ -20,7 +19,7 @@ struct OrderButton: View {
         }
         .buttonStyle(AlbertosButtonStyle())
         .sheet(isPresented: $showingDetail) {
-            OrderDetail(viewModel: .init(orderController: orderController,
+            OrderDetail(viewModel: .init(orderController: viewModel.orderController,
                                          paymentProcessor: paymentProcessor,
                                          onAlertDismiss: { self.showingDetail = false }))
         }
@@ -30,7 +29,7 @@ struct OrderButton: View {
 struct OrderButton_Previews: PreviewProvider {
     static var previews: some View {
         OrderButton(viewModel: .init(orderController: previewOrderController))
-            .environmentObject(OrderController())
             .environmentObject(PaymentProcessingProxy())
     }
 }
+

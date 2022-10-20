@@ -6,7 +6,7 @@ import AlbertosCore
 
 struct MenuList: View {
     @ObservedObject var viewModel: ViewModel
-    @EnvironmentObject var orderController: OrderController
+    var orderController: OrderController
     
     var body: some View {
         switch viewModel.sections {
@@ -37,7 +37,7 @@ struct MenuList: View {
 
 struct MenuList_Previews: PreviewProvider {
     static var previews: some View {
-        MenuList(viewModel: .init(menuFetcher: MenuFetchingPlaceholder().fetchMenu()))
-            .environmentObject(OrderController())
+        MenuList(viewModel: .init(menuFetcher: MenuFetchingPlaceholder().fetchMenu()), orderController: previewOrderController)
     }
 }
+
