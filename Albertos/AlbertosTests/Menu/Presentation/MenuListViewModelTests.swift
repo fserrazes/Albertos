@@ -46,8 +46,11 @@ final class MenuListViewModelTests: XCTestCase {
     
     func test_MenuFetchingPlaceholder_ReceiveValues() {
         let viewModel =  MenuList.ViewModel(menuFetcher: MenuFetchingPlaceholder().fetchMenu())
-        let expectation = XCTestExpectation(description: "Wait for loader to complete")
+        let previewBody =  MenuList_Previews.previews.body
+
+        XCTAssertNotNil(previewBody)
         
+        let expectation = XCTestExpectation(description: "Wait for loader to complete")
         viewModel
             .$sections
             .dropFirst()
