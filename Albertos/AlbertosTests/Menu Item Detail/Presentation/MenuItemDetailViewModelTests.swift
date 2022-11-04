@@ -107,7 +107,7 @@ final class MenuItemDetailViewModelTests: XCTestCase {
     func test_OnAddingItemToOrder_LogsMenuItemDetailOrderedEvent() throws {
         let eventLoggingSpy = EventLoggingSpy()
         let item = MenuItem.fixture(name: "item")
-        let orderController = OrderController()
+        let orderController = OrderController(orderStoring: OrderStoringFake())
         
         orderController.addToOrder(item: .fixture())
         let viewModel = MenuItemDetail.ViewModel(item: item, orderController: orderController,
@@ -134,6 +134,19 @@ final class MenuItemDetailViewModelTests: XCTestCase {
 
         XCTAssertEqual(eventLoggingSpy.loggedEvents.count, 0)
     }
+    
+    // MARK: - Test Preview Code
+    
+    func test_MenuItemDetailPreviews_HasValues() {
+        let item = menu.first!
+        let viewModel = MenuItemDetail.ViewModel(item: item, orderController: previewOrderController)
+        let previewBody =  MenuItemDetail_Previews.previews.body
+        
+        XCTAssertNotNil(previewBody)
+        XCTAssertNotNil(viewModel.name)
+        XCTAssertNotNil(viewModel.price)
+    }
+    
     
     // MARK: - Helpers
     
