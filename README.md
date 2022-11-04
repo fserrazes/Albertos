@@ -13,7 +13,7 @@ The source code is part of the tutorial in the Test-Driven Development in Swift 
 
 | Module           | Tests | Lines | Coverage |
 |------------------|-------|-------|----------|
-| Albertos         |  33   | 432   | 88,4%    |
+| Albertos         |  42   | 442   | 90,5%    |
 | AlbertosCore     |  11   |  87   | 96,6%    |
 
 **Notes:**
@@ -49,7 +49,9 @@ The main differences and changes from the book:
 
 6. The book accidentally introduces a Retains Circle problem, the fix was made in this project. The Pull Request was sent to the author of the book (it hasn't been fixed yet).
 
-7. Small compromises were made to facilitate the tracking of project progress. Besides being best practice!
+7. HyppoAnalytics (EventLooging framework) was implemented and tested. 
+
+8. Small comments were made to facilitate the tracking of project progress. Besides being best practice!
 
 ## TODO's
 
