@@ -3,11 +3,13 @@
 
 import Combine
 import AlbertosCore
+import HippoAnalytics
 
 extension MenuItemDetail {
     class ViewModel: ObservableObject {
         private let item: MenuItem
         private let orderController: OrderController
+        private let eventLogging: EventLogging
         
         let name: String
         let spicy: String?
@@ -17,9 +19,10 @@ extension MenuItemDetail {
         
         private var cancellables = Set<AnyCancellable>()
         
-        init(item: MenuItem, orderController: OrderController) {
+        init(item: MenuItem, orderController: OrderController, eventLogging: EventLogging = HippoAnalyticsClient(apiKey: "abcd")) {
             self.item = item
             self.orderController = orderController
+            self.eventLogging = eventLogging
             
             name = item.name
             spicy = item.spicy ? "Spicy" : .none
@@ -44,6 +47,11 @@ extension MenuItemDetail {
             } else {
                 orderController.addToOrder(item: item)
             }
+        }
+        
+        func onAppear() {
+            eventLogging.log(name: "menu_item_detail_visited",
+                             properties: ["item_name": item.name])
         }
     }
 }
