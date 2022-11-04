@@ -17,6 +17,7 @@
 		0D25FFBC28F99A36001B7682 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFBB28F99A36001B7682 /* MenuList.swift */; };
 		0D25FFC128F9B0BB001B7682 /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFC028F9B0BB001B7682 /* MenuRow.swift */; };
 		0D25FFD028FA0713001B7682 /* MenuFetchingPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D25FFCF28FA0713001B7682 /* MenuFetchingPlaceholder.swift */; };
+		0D46FCF929156B7B005FFA0D /* HippoAnalyticsClient+EventLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46FCF829156B7B005FFA0D /* HippoAnalyticsClient+EventLogging.swift */; };
 		0D4AF23928FD9DDE00605367 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF23828FD9DDE00605367 /* DataModel.swift */; };
 		0D4AF24E28FDA9A800605367 /* MenuRowViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF24828FDA9A800605367 /* MenuRowViewModelTests.swift */; };
 		0D4AF24F28FDA9A800605367 /* MenuListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AF24928FDA9A800605367 /* MenuListViewModelTests.swift */; };
@@ -115,6 +116,7 @@
 		0D25FFBB28F99A36001B7682 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		0D25FFC028F9B0BB001B7682 /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 		0D25FFCF28FA0713001B7682 /* MenuFetchingPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFetchingPlaceholder.swift; sourceTree = "<group>"; };
+		0D46FCF829156B7B005FFA0D /* HippoAnalyticsClient+EventLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HippoAnalyticsClient+EventLogging.swift"; sourceTree = "<group>"; };
 		0D4AF23828FD9DDE00605367 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		0D4AF24828FDA9A800605367 /* MenuRowViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuRowViewModelTests.swift; sourceTree = "<group>"; };
 		0D4AF24928FDA9A800605367 /* MenuListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuListViewModelTests.swift; sourceTree = "<group>"; };
@@ -518,6 +520,7 @@
 				0DC7C51228FEF9B40072C5DB /* PaymentProcessing.swift */,
 				0DC7C51B28FF1B060072C5DB /* PaymentProcessingProxy.swift */,
 				0DC7C51428FEFA760072C5DB /* HippoPaymentsProcessor+PaymentProcessing.swift */,
+				0D46FCF829156B7B005FFA0D /* HippoAnalyticsClient+EventLogging.swift */,
 			);
 			name = Payment;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				0D4AF26428FE9ACC00605367 /* MenuItemDetail+ViewModel.swift in Sources */,
 				0D4AF27728FEB25300605367 /* OrderDetail.swift in Sources */,
 				0D4AF25E28FDACE200605367 /* MenuItemDetail.swift in Sources */,
+				0D46FCF929156B7B005FFA0D /* HippoAnalyticsClient+EventLogging.swift in Sources */,
 				0DC7C54028FF379C0072C5DB /* Alert+ViewModel.swift in Sources */,
 				0DC7C51C28FF1B060072C5DB /* PaymentProcessingProxy.swift in Sources */,
 				0D4AF23928FD9DDE00605367 /* DataModel.swift in Sources */,

@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D46FCF329156A60005FFA0D /* EventLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46FCF229156A60005FFA0D /* EventLogging.swift */; };
 		0DC7C53328FF30600072C5DB /* HippoAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DC7C53228FF30600072C5DB /* HippoAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DC7C53D28FF31160072C5DB /* HippoAnalyticsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7C53C28FF31160072C5DB /* HippoAnalyticsClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D46FCF229156A60005FFA0D /* EventLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogging.swift; sourceTree = "<group>"; };
 		0DC7C52F28FF30600072C5DB /* HippoAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HippoAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC7C53228FF30600072C5DB /* HippoAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HippoAnalytics.h; sourceTree = "<group>"; };
 		0DC7C53C28FF31160072C5DB /* HippoAnalyticsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HippoAnalyticsClient.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				0DC7C53228FF30600072C5DB /* HippoAnalytics.h */,
+				0D46FCF229156A60005FFA0D /* EventLogging.swift */,
 				0DC7C53C28FF31160072C5DB /* HippoAnalyticsClient.swift */,
 			);
 			path = HippoAnalytics;
@@ -133,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D46FCF329156A60005FFA0D /* EventLogging.swift in Sources */,
 				0DC7C53D28FF31160072C5DB /* HippoAnalyticsClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
