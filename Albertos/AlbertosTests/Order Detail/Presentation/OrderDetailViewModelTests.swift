@@ -167,6 +167,16 @@ final class OrderDetailViewModelTests: XCTestCase {
         XCTAssertTrue(orderController.order.items.isEmpty)
     }
     
+    func test_OrderDetailPreviews_HasValues() {
+        let previewBody =  OrderDetail_Previews.previews.body
+        let orderController = OrderController(orderStoring: OrderStoringFake())
+        let viewModel = OrderDetail.ViewModel(orderController: orderController,
+                                              paymentProcessor: PaymentProcessingSpy(), onAlertDismiss: alertDismissDummy)
+
+        XCTAssertNotNil(previewBody)
+        XCTAssertNotNil(viewModel.$alertToShow)
+    }
+    
     // MARK: - Helpers
     
     private class PaymentProcessingSpy: PaymentProcessing {
