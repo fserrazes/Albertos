@@ -22,4 +22,15 @@ final class MenuRowViewModelTests: XCTestCase {
         
         XCTAssertEqual(viewModel.text, "name 🔥")
     }
+    
+    // MARK: - Test Preview Code
+    
+    func test_MenuRowPreviews_HasValues() {
+        let item = menu.first!
+        let viewModel = MenuRow.ViewModel(item: item)
+        let previewBody =  MenuRow_Previews.previews.body
+        
+        XCTAssertNotNil(previewBody)
+        XCTAssertNotNil(viewModel.text)
+    }
 }
