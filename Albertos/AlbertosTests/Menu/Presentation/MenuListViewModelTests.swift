@@ -42,6 +42,23 @@ final class MenuListViewModelTests: XCTestCase {
         }
     }
     
+    // MARK: - Test Preview Code
+    
+    func test_MenuFetchingPlaceholder_ReceiveValues() {
+        let viewModel =  MenuList.ViewModel(menuFetcher: MenuFetchingPlaceholder().fetchMenu())
+        let expectation = XCTestExpectation(description: "Wait for loader to complete")
+        
+        viewModel
+            .$sections
+            .dropFirst()
+            .sink { value in
+                XCTAssertNotNil(value)
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        wait(for: [expectation], timeout: 1)
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(menuGrouping: @escaping ([MenuItem]) -> [MenuSection] = { _ in [] },
