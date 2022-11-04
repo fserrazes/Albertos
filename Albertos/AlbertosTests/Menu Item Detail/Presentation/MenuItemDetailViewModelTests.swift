@@ -91,7 +91,7 @@ final class MenuItemDetailViewModelTests: XCTestCase {
     func test_OnAppear_LogsMenuItemDetailVisitedEvent() throws {
         let eventLoggingSpy = EventLoggingSpy()
         let item = MenuItem.fixture(name: "item")
-        let orderController = OrderController()
+        let orderController = OrderController(orderStoring: OrderStoringFake())
         
         let viewModel = MenuItemDetail.ViewModel(item: item, orderController: orderController,
                             eventLogging: eventLoggingSpy)
