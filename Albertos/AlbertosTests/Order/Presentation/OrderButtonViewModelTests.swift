@@ -21,7 +21,23 @@ final class OrderButtonViewModelTests: XCTestCase {
         
         order.addToOrder(item: .fixture(price: 2.3))
         XCTAssertEqual(sut.text, "Your Order $3.30")
+    }
+    
+    func test_onInit_showingDetailIsFalse() {
+        let (sut, _) = makeSUT()
+        let view = OrderButton(viewModel: sut)
         
+        XCTAssertFalse(view.showingDetail)
+    }
+    
+    // MARK: - Test Preview Code
+    
+    func test_OrderButtonPreviews_HasValues() {
+        let (sut, _) = makeSUT()
+        let previewView =  OrderButton_Previews.previews
+        
+        XCTAssertNotNil(previewView)
+        XCTAssertNotNil(sut.text)
     }
     
     // MARK: - Helpers
