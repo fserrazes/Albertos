@@ -46,6 +46,8 @@ extension MenuItemDetail {
                 orderController.removeFromOrder(item: item)
             } else {
                 orderController.addToOrder(item: item)
+                eventLogging.log(name: "menu_item_ordered",
+                                 properties: ["item_name": item.name])
             }
         }
         

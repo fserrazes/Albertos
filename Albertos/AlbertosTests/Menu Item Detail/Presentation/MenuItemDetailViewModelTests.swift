@@ -104,6 +104,23 @@ final class MenuItemDetailViewModelTests: XCTestCase {
         XCTAssertEqual(event.properties["item_name"] as? String, "item")
     }
     
+    func test_OnAddingItemToOrder_LogsMenuItemDetailOrderedEvent() throws {
+        let eventLoggingSpy = EventLoggingSpy()
+        let item = MenuItem.fixture(name: "item")
+        let orderController = OrderController()
+        
+        orderController.addToOrder(item: .fixture())
+        let viewModel = MenuItemDetail.ViewModel(item: item, orderController: orderController,
+                            eventLogging: eventLoggingSpy)
+
+        viewModel.addOrRemoveFromOrder()
+
+        XCTAssertEqual(eventLoggingSpy.loggedEvents.count, 1)
+        let event = try XCTUnwrap(eventLoggingSpy.loggedEvents.first)
+        XCTAssertEqual(event.name, "menu_item_ordered")
+        XCTAssertEqual(event.properties["item_name"] as? String, "item")
+    }
+    
     // MARK: - Helpers
     
     private class EventLoggingSpy: EventLogging {
