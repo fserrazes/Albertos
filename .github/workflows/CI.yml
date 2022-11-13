@@ -33,7 +33,6 @@ jobs:
       uses: codecov/codecov-action@v3
       with:
           file: ./coverage.xml
-          flags: unit_tests
-          name: codecov-umbrella
+          version: "v0.1.15"
           fail_ci_if_error: true
           verbose: true
